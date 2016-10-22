@@ -1,0 +1,95 @@
+<div ng-controller="proaccount" class="pro-account-register-page">
+	<div class="breadcrumbs">
+        <div class="container">
+            <h2 class="pull-left">Create Your Account</h2>
+           <h2 class="pull-right">{{page}}</h2>
+        </div>
+    </div>
+	<div class="container content">
+	<div>
+		<loading></loading>
+			<div class="row">
+				
+				<div class="col-md-2"></div>
+				<div class="col-md-8">
+					<div>
+					    <form role="form" id="pro-signup-form" class="sky-form" ng-submit="prosignup()">
+								<header>Account Details</header>
+					    		<fieldset>
+					 				<div class="row">
+                                        <section class="col col-6">
+                                            <label class="input" ng-class="{ 'has-success': !error['first_name'] && submitted,
+						                            'state-error': error['first_name'] && submitted }">
+                                                    <i class="icon-append fa fa-user"></i>
+										            <input ng-model="prouserModel.first_name" type="text" id="pro-signup-form-first_name" class="" placeholder="FirstName" required>
+										            <!--<b class="tooltip tooltip-bottom-right">Needed to Enter Your First Name</b>-->
+                                            </label><em class="help-block help-block-error">{{ error['first_name'] }}</em> 
+                                        </section>
+                                        <section class="col col-6">
+                                            <label class="input" ng-class="{ 'has-success': !error['last_name'] && submitted,
+						                            'state-error': error['last_name'] && submitted }">
+                                                    <i class="icon-append fa fa-user"></i>
+                                    				<input ng-model="prouserModel.last_name" type="text" id="pro-signup-form-last_name" class="" placeholder="Lastname" required>
+                 									<!--<b class="tooltip tooltip-bottom-right">Needed to Enter Your Last Name</b>-->
+                                            </label><em class="help-block help-block-error">{{ error['last_name'] }}</em>
+                                        </section>
+                                    </div>
+										<section>
+		                                    <label class="input" ng-class="{ 'has-success': !error['email'] && submitted,
+						                            'state-error': error['email'] && submitted }">
+		                                        	<i class="icon-append fa fa-envelope"></i>
+					                                <input ng-model="prouserModel.email" type="email" id="pro-signup-form-email" class="" placeholder="Email" required>
+		                                        	<!--<b class="tooltip tooltip-bottom-right">Needed to Enter Your Email</b>-->
+		                                    </label> <em class="help-block help-block-error">{{ error['email'] }}</em>
+		                                </section>
+										<section>
+											<label class="input" ng-class="{'has-success': !error['mobile'] && submitted,
+														'state-error': error['mobile'] && submitted }">
+												<i class="icon-prepend fa fa-phone"></i>
+												<input type="tel" ng-model="prouserModel.mobile" placeholder="Mobile" required>
+											</label><em class="help-block help-block-error">{{ error['mobile']}}</em>
+										</section>
+                    			</fieldset>
+                    			<header>Create Password</header>
+								<fieldset>							
+										 <section>
+			                                <label class="input" ng-class="{ 'has-success': !error['password'] && submitted,
+						                            'state-error': error['password'] && submitted }">
+			                                        <i class="icon-append fa fa-lock"></i>
+													<input ng-model="prouserModel.password" type="password" id="pro-signup-form-password" class="" placeholder="password" required>
+			                                    	<!--<b class="tooltip tooltip-bottom-right">Don't Forget Your Password</b>-->
+			                                </label><em class="help-block help-block-error">{{ error['password'] }}</em>
+			                            </section>
+			                            <section>
+			                                <label class="input" ng-class="{ 'has-success': !error['repeat_password'] && submitted,
+						                            'state-error': error['repeat_password'] && submitted }">
+			                                       <i class="icon-append fa fa-repeat"></i>
+					                               <input ng-model="prouserModel.repeat_password" type="password" id="pro-signup-form-repeat_password" class="" placeholder="Confirm Password" required>
+					                               <!--<b class="tooltip tooltip-bottom-right">Don't Forget Your Password</b>-->
+			                                </label><em class="help-block help-block-error">{{ error['repeat_password'] }}</em>
+			                            </section>
+					                    <section>
+				                            <label class="textarea">
+				                                <i class="icon-append fa fa-comment"></i>
+				                                <textarea placeholder="Terms of Service" rows="5" readonly> Terms of Service: 
+				                                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos doloribus asperiores repellat."
+				                                </textarea>
+				                            </label>
+                        				</section>
+										<section>
+		                                    <label class="checkbox" ng-class="{ 'has-success': !error['terms'] && submitted,
+						                            'state-error': error['terms'] && submitted }"><input type="checkbox" ng-model="prouserModel.terms" required><i></i>I Agree to the Terms of Service and Privacy Policy Of advisorhunter.com</label>
+						                    <em class="help-block help-block-error">{{ error['terms'] }}</em>
+		                                </section>
+								</fieldset>	
+							    <footer>
+									<button class="btn-u pull-right" type="submit">CreateAccount</button>
+		                    	</footer>
+						</form>
+					</div>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,162 @@
+<div border="1" ng-controller="leadquestion">
+    <!-- Search Modal Form -->        
+    <div class="modal-content-lead" id="responsive">
+     <div class="tag-box-v2 tag-box">
+        <div class="modal-header1">
+            <button type="button" class="close" ng-click="$dismiss(cancel)" aria-hidden="true">&times;</button>
+	    	<h4 id="myModalLabel4" class="modal-title">We'll introduce you to pros ready to complete your project.</h4>
+        </div>
+        <div class="modal-body">
+        	<div  ng-repeat="question in questions track by $index" ng-show="$index == indexToShow" >	 
+				    <div class="progress progress-striped active">
+				        <div  progressbar="(100 / questions.length) * $index" class="progess-bar progress-bar-success"></div>
+				    </div>             
+				      <p class="text-center">{{((100 / questions.length) * $index) | number:0}} % Complete (success)</p>
+        		<form class="sky-form">
+            	<div class="row">
+	    			<div class="col-md-1"></div>
+                	<div class="col-md-11">
+                   <!-- <p><input class="form-control" type="text" placeholder="Name" /></p> -->
+		       		<!-- Single Choice -->
+					<div  ng-if="question.question_type_id == 1">
+						<h1>{{question.question_text}}</h1>
+							<div class="top_answer" ng-repeat="answer in answers"><label class="radio">
+								<input type="radio" ng-value="answer.id" ng-checked="lead[question.id].indexOf(answer.id) > -1" ng-click="change(question.id,answer.id)">
+								<div class="answer_text">{{answer.answer_text}}</div>
+								<!-- <i class="rounded-x"></i> -->
+							</label></div>
+						<div class="modal-footer"> 
+						   <button type="button" class="btn-u-modal-popup btn-u-primary pull-left" ng-click="back()" ng-hide="$index==0">Back</button>
+						</div>
+				    </div>
+				    <!-- Multiple Choice -->
+					<div ng-if="question.question_type_id == 2">
+						<h1>{{question.question_text}}</h1>
+							<div id ="multi-ans-select" class="top_answer" ng-repeat="answer in answers"><label  class="checkbox">
+								<input id="{{answer.id}}" name="selection" type="checkbox" value="{{answer.id}}" ng-checked="lead[question.id].indexOf(answer.id) > -1" ng-click="toggleSelection(answer.id)">
+								<div class="answer_text">{{answer.answer_text}}</div>
+								<!-- <i></i> -->
+							</label></div>
+						   <div class="modal-footer">
+						      <button type="button" class="btn-u-modal-popup btn-u-primary pull-left" ng-click="back()" ng-hide="$index==0">Back</button>
+						      <button type="button" class="btn-u-modal-popup btn-u-primary pull-right" ng-click="change(question.id,selection)">Continue</button>					
+						  </div>
+					</div>
+					<!-- Subjective -->
+					<div ng-if="question.question_type_id == 3">
+						<h1>{{question.question_text}}</h1>
+							<label class="textarea">
+                                <i class="icon-prepend fa fa-comment"></i>
+                                <textarea placeholder="" name="comment" rows="5" ng-model="ans_text"></textarea><span>{{validatetext}}</span>
+                            </label>
+						<div class="modal-footer">
+							 <button type="button" class="btn-u-modal-popup btn-u-primary pull-left" ng-click="back()" ng-hide="$index==0">Back</button>
+						    <button type="button"  class="btn-u-modal-popup btn-u-primary pull-right" ng-click="change(question.id,ans_text);onSubmitted(ans_text)">Continue</button>
+						</div>
+				    </div>
+
+					<!-- Price Range -->
+					<div ng-if="question.question_type_id == 4">
+						<h1>{{question.question_text}}</h1>				
+							<div>
+				<!-- 				<b>$ {{answers[0].answer_text}}</b> <input id="qslider" type="text" class="range-slider" value="" data-slider-min="{{answers[0].answer_text}}" data-slider-max="{{answers[1].answer_text}}" data-slider-step="5" data-slider-value="[{{answers[0].answer_text}}, {{answers[1].answer_text}}]" /> <b>$ {{answers[1].answer_text}}</b> -->
+
+								<h1><b>€ {{answers[0].answer_text}}</b> <input id="ex2" type="text" class="range-slider" value="" data-slider-min="{{answers[0].answer_text}}" data-slider-max="{{answers[0].answer_text}}" data-slider-step="" data-slider-value="[{{answers[1].answer_text}},{{answers[1].answer_text}}]" style="width:400px" /> <b>€ {{answers[1].answer_text}}</b></h1>
+							</div>	
+							<!-- <div class="top_answer" ng-repeat="answer in answers"><label class="checkbox"> -->
+								<!-- <input id="{{answer.id}}" type="checkbox" value="{{answer.id}}" ng-checked="lead[question.id].indexOf(answer.id) > -1" ng-click="toggleSelection(answer.id)" checked/>
+								<div class="answer_text">{{answer.answer_text}}</div> -->
+								<!-- <i></i> -->
+						 	<!-- </label></div> -->
+						<div class="modal-footer">
+							  <button type="button" class="btn-u-modal-popup btn-u-primary pull-left" ng-click="back()" ng-hide="$index==0">Back</button>
+							  <button type="button" class="btn-u-modal-popup btn-u-primary pull-right" ng-click="change(question.id,selection)">Continue</button>
+						</div>
+					</div>
+					<!-- Date Range -->
+					<div ng-if="question.question_type_id == 5">
+						<h1>{{question.question_text}}</h1>
+						<!-- <div class="top_answer" ng-repeat="answer in answers"> -->
+							<input type="text" class="datepicker" name="daterange" ng-model="daterange" value="01/01/2015 - 01/31/2015" /> 
+							<div class="clearfix"></div>
+							
+							
+							<!-- <label class="checkbox">
+					    		<input id="{{answer.id}}" type="checkbox" value="{{answer.id}}" ng-checked="lead[question.id].indexOf(answer.id) > -1" ng-click="toggleSelection(answer.id)" />
+					    		<div class="answer_text">{{answer.answer_text}}</div>
+							</label> -->
+						<!-- </div> -->
+						<div class="modal-footer">
+							 <button type="button" class="btn-u-modal-popup btn-u-primary pull-left" ng-click="back()" ng-hide="$index==0">Back</button>
+							 <button type="button" class="btn-u-modal-popup btn-u-primary pull-right" ng-click="change(question.id,daterange)">Continue</button>
+						</div>
+					</div>
+
+				    <!-- {{questions.length}} -->
+				    <div  ng-if="question.question_type_id == -11">
+						<h1 class="margin-bottom-20">Best contact info to pass on to pros</h1>
+						 <div class="row">
+                			<div class="col-md-10 col-md-offset-2"> 
+						    	<form name="lead-details" class="form-lead-details" role="form" action="" ng-submit="lead()" action="">
+									<div class="input-group margin-bottom-20 col col-10">
+										<span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+										<div ng-class="{ 'has-success': !error['first_name'] && submitted,
+								                    'has-error': error['first_name'] && submitted }"
+								                     class="form-group field-lead-details-first_name required" style="margin-top: -15px;">
+										</div>
+						                    <input ng-model="userModel.first_name" type="text" id="lead-details-first_name" class="form-control" placeholder="FirstName" required>
+										</div><p class="help-block help-block-error">{{ error['first_name'] }}</p> 
+										<div class="input-group margin-bottom-20 col col-10">
+											<span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+						                        <div ng-class="{ 'has-success': !error['last_name'] && submitted,
+						                            'has-error': error['last_name'] && submitted }"
+						                             class="form-group field-lead-details-last_name required" style="margin-top:-15px;">
+						                         </div>
+				                                    	<input ng-model="userModel.last_name" type="text" id="lead-details-last_name" class="form-control" placeholder="Lastname" required>
+				                        </div><p class="help-block help-block-error">{{ error['last_name'] }}</p>
+										<div class="input-group margin-bottom-20 col col-10">
+											<span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+						                        <div ng-class="{ 'has-success': !error['email'] && submitted,
+						                            'has-error': error['email'] && submitted }"
+						                             class="form-group field-lead-details-email required" style="margin-top:-15px;">
+						                           </div>
+				                                    	<input ng-model="userModel.email" type="email" id="lead-details-email" class="form-control" placeholder="Email" required>
+
+				                        </div><p class="help-block help-block-error">{{ error['email'] }}</p>
+										<div class="input-group margin-bottom-20 col col-10">
+											<span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+												<div ng-class="{ 'has-success': !error['phone'] && submitted,
+						                            'has-error': error['phone'] && submitted }"
+						                             class="form-group field-lead-details-phone required" style="margin-top:-15px;">
+						                           </div>
+												<input ng-model="userModel.phone" type="phone" id="lead-details-phone" class="form-control" placeholder="phone" required>
+												<p class="help-block help-block-error">{{ error['phone'] }}</p>
+											</div>			
+										<div class="clearfix"></div>		
+				                    		<div class="modal-footer text-left">
+				                    		<button type="button" class="btn-u-modal-popup btn-u-primary pull-left" ng-click="back()" ng-hide="$index==0">Back</button>
+											<button type="submit" class="btn-u pull-left col-md-offset-6"><span class="glyphicon glyphicon-ok"></span>Submit</button></div>
+				               		</form>
+				            	</div>
+				        	 </div>
+
+						</div>
+					</div>
+              </div>
+            </div>
+        </form>
+        </div>  
+        </div>
+    </div>        
+</div>
+
+</div>
+<script type="text/javascript">
+$(function() {
+    $('.modal').one('click', function() {
+       $('.datepicker').daterangepicker();
+       $('.range-slider').slider();
+    });
+});
+
+</script>

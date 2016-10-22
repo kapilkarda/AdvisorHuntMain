@@ -1,0 +1,93 @@
+<div ng-controller="myprofile"> 
+             <div class="tag-box tag-box-v2 ">   
+                <div class="modal-header1">
+                    <button type="button" class="close" data-dismiss="modal"  ng-click="$dismiss('cancel')">&times;</button>
+                    <h4 class="modal-title">Upload Project</h4>                  
+                        A Project is a collection of photos of your own work or products. Projects are usually best organized by client, job site, or product line. 
+                </div>
+                <div class="modal-body">
+                    <form class="sky-form" name="userForm" novalidate>
+                        <fieldset>
+                                <section>
+                                    <label class="select">
+                                        <select>
+                                            <option value="0">Which Project was it part of?</option>
+                                            <option value="1">Your Existing Project</option>
+                                            <option value="2">Your Previous Projects?</option>
+                                        </select>
+                                        <i></i>
+                                    </label>
+                                </section>
+                                <section>
+                                    <label class="select">
+                                        <select>
+                                            <option value="0">Select Existing Project</option>
+                                            <option value="1">Project 1</option>
+                                            <option value="2">Project 2</option>
+                                            <option value="3">Project 3</option>
+                                        </select>
+                                        <i></i>
+                                    </label>
+                                </section>
+                                <section>
+                                        <label class="input">
+                                            <input type="text" placeholder="Project Name">
+                                        </label>
+                                </section>
+                                <section>
+                                    <label class="input">
+                                        <input type="text" placeholder="Project Description">
+                                    </label>
+                                </section>
+                                <section>
+                                        <div class="row">
+                                        <section class="col col-4">
+                                            <label class="select">
+                                                <select name="interested">
+                                                    <option disabled="" selected="" value="none">Year</option>
+                                                    <option value="design">2000</option>
+                                                    <option value="development">2001</option>
+                                                    <option value="illustration">2002</option>
+                                                </select>
+                                                <i></i>
+                                            </label>
+                                        </section>
+                                        <section class="col col-4">
+                                            <label class="select">
+                                                <select name="budget">
+                                                    <option disabled="" selected="" value="0">Project Cost</option>
+                                                    <option value="less than 5000$">less than 5000$</option>
+                                                    <option value="5000$ - 10000$">5000$ - 10000$</option>
+                                                    <option value="10000$ - 20000$">10000$ - 20000$</option>
+                                                    <option value="more than 20000$">more than 20000$</option>
+                                                </select>
+                                                <i></i>
+                                            </label>
+                                        </section>
+                                        <section class="col col-4">
+                                            <label class="input">
+                                                <input type="text" placeholder="Zip Code">
+                                            </label>
+                                        </section>
+                                    </div>
+                                </section>
+                                <section>
+                                    <label class="input">
+                                        <i class="icon-append fa fa-globe"></i>
+                                        <input type="url" placeholder="Link to Your Website" name="url">
+                                    </label>
+                                </section>
+                                <section>
+                                    <label class="input input-file" for="file">
+                                        <div class="button"><input type="file" onchange="this.parentNode.nextSibling.value = this.value" multiple="" name="file">Upload</div><input type="text" readonly="" placeholder="Replace this with drop box panel">
+                                    </label>
+                        </section>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer text-right">
+                    <button type="button" class="btn btn-default btn-default" data-dismiss="modal" ng-click="$dismiss('cancel')">Cancel</button>
+                    <button type="button"class="btn btn-u btn-default" ng-click="updateProinfo()">Save</button>
+                </div>
+            </div>
+ </div>

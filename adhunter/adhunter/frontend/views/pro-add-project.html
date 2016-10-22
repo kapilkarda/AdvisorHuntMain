@@ -1,0 +1,79 @@
+<div ng-controller="myprofile"> 
+             <div class="tag-box tag-box-v2 ">   
+                <div class="modal-header1">
+                    <button type="button" class="close" data-dismiss="modal"  ng-click="$dismiss('cancel')">&times;</button>
+                    <h4 class="modal-title">Upload Project</h4>                  
+                        A Project is a collection of photos of your own work or products. Projects are usually best organized by client, job site, or product line. 
+                </div>
+                <div class="modal-body">
+                    <form class="sky-form" name="userForm" novalidate>
+                        <fieldset>
+                                <section>
+                                    <label class="select">
+                                        <select>
+                                            <option value="0">Choose name</option>
+                                            <option value="1">Alexandra</option>
+                                            <option value="2">Alice</option>
+                                            <option value="3">Anastasia</option>
+                                            <option value="4">Avelina</option>
+                                        </select>
+                                        <i></i>
+                                    </label>
+                                </section>
+                                <section>
+                                        <label class="input">
+                                            <input type="text">
+                                        </label>
+                                </section>
+                                <section>
+                                        <div class="row">
+                                        <section class="col col-6">
+                                            <label class="select">
+                                                <select name="interested">
+                                                    <option disabled="" selected="" value="none">Year</option>
+                                                    <option value="design">2000-2001</option>
+                                                    <option value="development">2001-2002</option>
+                                                    <option value="illustration">2002-2003</option>
+                                                </select>
+                                                <i></i>
+                                            </label>
+                                        </section>
+                                        <section class="col col-6">
+                                            <label class="select">
+                                                <select name="budget">
+                                                    <option disabled="" selected="" value="0">Project Cost</option>
+                                                    <option value="less than 5000$">less than 5000$</option>
+                                                    <option value="5000$ - 10000$">5000$ - 10000$</option>
+                                                    <option value="10000$ - 20000$">10000$ - 20000$</option>
+                                                    <option value="more than 20000$">more than 20000$</option>
+                                                </select>
+                                                <i></i>
+                                            </label>
+                                        </section>
+                                    </div>
+                                </section>
+                                <section>
+                                    <label class="input" for="file">
+                                        <input type="text" placeholder="Project Address" id="file">
+                                    </label>
+                                </section>
+                                <section>
+                                    <label class="input">
+                                        <i class="icon-append fa fa-globe"></i>
+                                        <input type="url" name="url">
+                                    </label>
+                                </section>
+                                <section>
+                                    <label class="input input-file" for="file">
+                                        <div class="button"><input type="file" onchange="this.parentNode.nextSibling.value = this.value" multiple="" name="file">Upload</div><input type="text" readonly="" placeholder="Drop photos here or click to upload">
+                                    </label>
+                        </section>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer text-right">
+                    <button type="button" class="btn btn-default btn-default" data-dismiss="modal" ng-click="$dismiss('cancel')">Cancel</button>
+                    <button type="button"class="btn btn-u btn-default" ng-click="updateProinfo()">Save</button>
+                </div>
+            </div>
+ </div>

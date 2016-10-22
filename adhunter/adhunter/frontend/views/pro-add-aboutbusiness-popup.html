@@ -1,0 +1,38 @@
+<div ng-controller="myprofile"> 
+             <div class="tag-box tag-box-v2 ">   
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"  ng-click="$dismiss('cancel')">&times;</button>
+                    <h4 class="modal-title">About Your Business</h4>
+                    <p>Adding your Better Business Bureau rating lets homeowners know that you are trustworthy and stand by your work.</p>
+                </div>
+                <div class="modal-body">
+                    <div class="sky-form">
+                        <fieldset>
+                        <section>
+                            <label class="textarea">
+                                <textarea ng-model="prof.about" rows="5" placeholder="Write about you"></textarea>
+                            </label>
+                        </section>
+                        <div class="row">
+                           <section class="col col-4">
+                                    <label class="input">
+                                        YEAR FOUNDED
+                                        <input type="text" placeholder="Year Founded" ng-model="prof.year_founded">
+                                    </label>
+                                </section>
+                                <section class="col col-8">
+                                    <label class="input">
+                                        WEBSITE
+                                            <input type="url" placeholder="Website" ng-model="prof.website">
+                                    </label>
+                                </section>
+                        </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="modal-footer text-right">
+                    <button type="button" class="btn btn-default btn-default" data-dismiss="modal" ng-click="$dismiss('cancel')">Cancel</button>
+                    <button type="button" id="submitForm" class="btn btn-u btn-default" ng-click="updateAboutBusiness()">Save</button>
+                </div>
+            </div>
+ </div>

@@ -1,0 +1,50 @@
+<div ng-controller="LoginController">    
+<div class="tag-box tag-box-v2 margin-bottom-40">
+    <div class="modal-header text-center">
+		<img class="shrink-logo" src="assets/img/logo2-default.png" alt="Logo">
+        <button type="button" class="close" data-dismiss="modal" ng-click="$dismiss('cancel')">&times;</button>
+    </div>
+    <div class="modal-body">       
+		<h3><strong>Login to Your Account</strong></h3>
+                    <div class="margin-bottom-30">Don't have an account? <a ng-controller="home" ng-click="register()"> Sign Up</a></div>
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <form ng-submit="login()" name="loginForm" id="login-form" class="sky-form" method="post" role="form" >
+                               <section>
+                               		<label class="input" ng-class="{ 'has-success': !error['email'] && submitted,
+			                            'state-error': error['email'] && submitted }"
+			                             class="field-loginform-email required">
+					 					<i class="icon-append fa fa-user"></i>
+					 					<input ng-model="userModel.email" type="email" id="loginform-email" class="form-control" placeholder= "Email">
+									</label><em class="help-block help-block-error">{{ error['email'] }}</em>
+								</section>
+								<section>
+									<label class="input" ng-class="{ 'has-success': !error['password'] && submitted,
+		                            'state-error': error['password'] && submitted }"
+		                             class="form-group field-loginform-password required">
+										<i class="icon-append fa fa-lock"></i>
+					  					<input ng-model="userModel.password" type="password" id="loginform-password" class="form-control" placeholder="password">
+		                        	</label><em class="help-block help-block-error">{{ error['password'] }}</em>
+								</section>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-u btn-fullWidth" name="login-button">Login</button>
+                                </div>
+                            </form>
+                        </div>
+       		 		</div>
+	<div class="modal-footer">
+		<div is="null" class="col-sm-12 margin-bottom-20 text-center">Forgot your password? &nbsp;<a ng-click="forgetpassword()">Click here</a></div>
+		<div is="null" class="authForm-facebook-button-divider"><span is="null" class="authForm-facebook-button-text">or</span></div>
+			<div class="row">	
+				<div class="col-md-10 col-md-offset-1">
+					<button type="submit" class="btn btn-primary btn-fullWidth" name="login-button">Login with Facebook</button>
+					</div>
+					</div>
+				</div>
+		    </div>
+    </div>    
+</div>
+</div>
+
+
+

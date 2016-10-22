@@ -1,0 +1,110 @@
+<div ng-controller="pro-add-company" class="pro-account-register-page">
+    <div class="breadcrumbs">
+        <div class="container">
+                <h2 class="pull-left">Tell Us about your Company</h2>
+                <h2 class="pull-right">{{page}}</h2>
+            </div>
+</div>
+<div class="container content">
+    <div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div ng-init="loadSubCategory();" >
+                <form name="registerform" ng-submit="addNewCompany(registerform)" ng-validate="validationOptions" novalidate class="sky-form">
+                    <input type="hidden" ng-model="companyModel.user_id">
+                    <input type="hidden" ng-model="companyModel.country_id">
+                        <header> Business Details</header>
+                        <fieldset>
+                            <section>
+                                <label class="input" ng-class="{'has-success': !error['name'] && submitted,'state-error': error['name'] && submitted }">
+                                    <i class="icon-prepend fa fa-user"></i>
+                                    <input type="text" ng-model="companyModel.name"  placeholder="Business name" id="cmpnyname" name="cmpnyname" required>
+                                    <b class="tooltip tooltip-bottom-right">Needed to Enter Your Business Name</b>
+                                </label><em class="help-block help-block-error">{{ error['name'] }}</em>
+                            </section>
+                            <section>
+                                <label class="input" class="input" ng-class="{ 'has-success': !error['address'] && submitted, 'state-error': error['address'] && submitted }">
+                                    <input type="text" ng-model="companyModel.address" placeholder="Address" id="file" id="cmpnyaddress" name="cmpnyaddress" required>
+                                    <b class="tooltip tooltip-bottom-right">Needed to Enter Your Business Address</b>
+                                </label>
+                                <em class="help-block help-block-error">{{ error['address'] }}</em>
+                            </section>
+                            <div class="row">
+                            <section class="col col-3">
+                                <label class="input" ng-class="{'has-success': !error['zip'] && submitted, 'state-error': error['zip'] && submitted }">
+                                    <input type="tel" ng-model="companyModel.zip" placeholder="Post code" ng-keyup="showCityState(companyModel.zip)" id="zipcode" name="zipcode" maxlength="5" required>
+                                </label>
+                                <em class="help-block help-block-error">{{ error['zip'] }}</em>
+                            </section>
+                             <section class="col col-3">
+                                <label class="input">
+                                    <input type="text" ng-model="city_id" id="city" name="city" placeholder="city" readonly required>
+                                </label>
+                            </section>
+                             <section class="col col-3">
+                                <label class="input">
+                                    <input type="text" ng-model="state_id" id="state" name="state" placeholder="State" readonly required>
+                                </label>
+                            </section>
+                            </div>
+                        </fieldset>
+                        <header> Contact information</header> 
+                        <fieldset>
+                            <section >
+                                <label class="input" ng-class="{'has-success': !error['phone'] && submitted, 'state-error': error['phone'] && submitted }">
+                                    <i class="icon-prepend fa fa-phone"></i>
+                                    <input type="tel" ng-model="companyModel.phone" placeholder="Buisness phone" id="businsess_phone" name="businsess_phone" required>
+                                </label><em class="help-block help-block-error">{{ error['phone']}}</em>
+                            </section>                                
+                            <section>
+                                <label class="input" ng-class="{'has-success': !error['email'] && submitted, 'state-error': error['email'] && submitted }">
+                                    <i class="icon-prepend fa fa-envelope"></i>
+                                    <input type="email" id="businsess_email" name="businsess_email" required ng-model="companyModel.email" placeholder="Business E-mail">
+                                </label><em class="help-block help-block-error">{{ error['email']}}</em>
+                            </section>
+                            <section>
+                                <label class="checkbox">
+                                    <input type="checkbox" ng-change="copyPersonalContact();"  ng-model="companyModel.same"><i></i>Same as Personal Contact
+                                </label>
+                            </section>
+                        </fieldset>
+                        <header>Primary Pro Type</strong></header>  
+                        <fieldset>
+                            <section >
+                                <label class="select" ng-class="{'has-success': !error['main_category'] && submitted, 'state-error': error['main_category'] && submitted }">
+                                    <select id="dd_primary_service" name="dd_primary_service" ng-options="procat as procat.name for procat in  getSubcategory track by procat.id" required ng-model="companyModel.main_category" >
+                                        <option value="">Select Primary Pro Service</option>
+                                    </select>
+                                    <i></i>
+                                </label><em class="help-block help-block-error">{{ error['main_category']}}</em>
+                            </section>
+                        </fieldset>  
+                        <header>Service Area</header>
+                        <fieldset>                                  
+                            <section >
+                                <label class="select" ng-class="{'has-success': !error['main_category'] && submitted, 'state-error': error['area_limit'] && submitted }">
+                                    <select ng-model="companyModel.area_limit" required>
+                                        <option value="">Select In Range</option>
+                                        <option value="5">5 miles</option>
+                                        <option value="10">10 miles</option>
+                                        <option value="15">15 miles</option>
+                                        <option value="30">30 miles</option>
+                                        <option value="35">35 miles</option>
+                                        <option value="40">40 miles</option>
+                                    </select>
+                                    <i></i>
+                                </label><em class="help-block help-block-error">{{ error['area_limit']}}</em>
+                            </section>
+                        </fieldset>
+                        <footer>         
+                            <button type="submit" class="btn-u pull-right"><span class="glyphicon glyphicon-ok"></span> Create Buisness</button> 
+                        </footer>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    </div>
+</div>
+</div>

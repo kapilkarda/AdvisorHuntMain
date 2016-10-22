@@ -1,0 +1,65 @@
+<div ng-controller="myprofile"> 
+             <div class="tag-box tag-box-v2 ">   
+                <div class="modal-header1">
+                    <button type="button" class="close" data-dismiss="modal"  ng-click="$dismiss('cancel')">&times;</button>
+                    <h4 class="modal-title"> {{licenseop}} License</h4>                  
+                        Include your professional license information here to generate up to three times more job leads.
+                </div>
+                <div class="modal-body">
+
+                    <form ng-submit="submitLicense(licenseop)" name="liecenseForm" id="liecense-form" class="sky-form" method="post" role="form" >
+                            <input ng-model="liecenseModel.fk_i_company_id" type="hidden">
+                                </label><em class="help-block help-block-error">
+                            <section>
+                                State: 
+                                <label ng-class="{ 'has-success': !error['fk_i_state_id'] && submitted,
+                                        'state-error': error['fk_i_state_id'] && submitted }"
+                                         class="select field-liecenseForm-fk_i_state_id required">
+                                         <select  ng-model="liecenseModel.fk_i_state_id" ng-options="s.id as s.name for s in states"></select> <i></i>
+                                </label><em class="help-block help-block-error">{{ error['fk_i_state_id'] }}</em>
+                            </section>
+
+                             <section>
+                                <label class="input" ng-class="{ 'has-success': !error['s_accreditation'] && submitted,
+                                'state-error': error['s_accreditation'] && submitted }"
+                                 class="form-group field-loginform-s_accreditation required">
+                                    <i></i>
+                                    <input ng-model="liecenseModel.s_accreditation" type="text" id="liecenseForm-s_accreditation" class="form-control" placeholder="Accreditation">
+                                </label><em class="help-block help-block-error">{{ error['s_accreditation_hash'] }}</em>
+                            </section>
+
+                            <section>
+                                <label class="input" ng-class="{ 'has-success': !error['s_accreditation_hash'] && submitted,
+                                'state-error': error['s_accreditation_hash'] && submitted }"
+                                 class="form-group field-loginform-s_accreditation_hash required">
+                                    <i class=""></i>
+                                    <input ng-model="liecenseModel.s_accreditation_hash" type="text" id="liecenseForm-s_accreditation_hash" class="form-control" placeholder="Accreditation#">
+                                </label><em class="help-block help-block-error">{{ error['s_accreditation_hash'] }}</em>
+                            </section>
+
+                            <section>
+                                <label class="input" ng-class="{ 'has-success': !error['s_license_details'] && submitted,
+                                'state-error': error['s_license_details'] && submitted }"
+                                 class="form-group field-loginform-s_license_details required">
+                                    <i class=""></i>
+                                    <input ng-model="liecenseModel.s_license_details" type="text" id="liecenseForm-s_license_details" class="form-control" placeholder="License Details">
+                                </label><em class="help-block help-block-error">{{ error['s_license_details'] }}</em>
+                            </section>
+
+                            <section>
+                                <label class="input" ng-class="{ 'has-success': !error['dt_expiration'] && submitted,
+                                        'state-error': error['dt_expiration'] && submitted }">
+                                    <!-- <i class="icon-append fa fa-calendar"></i> -->
+                                    <input type="date" ng-model="liecenseModel.dt_expiration" name="date" id="date" placeholder="Expiration date">
+                                </label>
+                                <em class="help-block help-block-error">{{ error['dt_expiration'] }}</em>
+                            </section>
+
+                            <div class="modal-footer text-right">
+                                <button type="button" class="btn btn-u-default" data-dismiss="modal" ng-click="$dismiss('cancel')">Cancel</button>
+                                <button type="submit" action ="new" class="btn btn-u" name="login-button">Save</button>
+                            </div>
+                        </form>
+                </div>
+            </div>
+ </div>

@@ -1,0 +1,169 @@
+/*
+Theme Name: blank
+Theme URI:
+Description: WordPress theme starter pack for faster design and development.
+Author URI:
+Version:
+Tags:
+This theme is property of Adam Dachis and is not available for public use.
+*/
+
+/*** YOUR CSS ***/
+#wrapper {
+    background: #fff none repeat scroll 0 0;
+}
+
+.entry-content, .meta-prep, .entry-date,.entry-utility-prep{
+color: #333 !important;	
+}
+.comments-itself{
+	margin-top: 30px;
+}
+
+#footer-sidebar-2.posts .widget-container li {
+    border-top: 1px solid #353535;
+    padding: 8px 0;
+}
+
+.posts .widget-container li a {
+    color: #eee;
+}
+.posts .widget-container li .post-date{
+	color: #999;
+    display: block;
+}
+.posts .widget-container ul{
+	list-style: outside none none;
+    padding-left: 0;
+}
+.inner{
+box-shadow: 0 0 4px 0 #888888;
+margin-bottom: 20px;
+padding: 15px;
+}
+
+#nav-below.pager-v3 a{
+	background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    display: inline-block;
+    padding: 5px 14px;
+}
+.news-v3 .post-shares li span a{ color: #FFF;}
+.like img{ display: none;}
+
+#secondary .widget-title{
+	font-size: 20px;
+    font-weight: 200;
+	color: #555 !important;
+    font-family: "Open Sans",Arial,sans-serif;
+}
+#secondary .widget-container ul li a{
+	font-size: 14px;
+    line-height: 20px;
+	}
+.detail-page .widget-title{background-color: #fff !important; color: #555;}
+.like .ldc-ul_cont{background: none !important;}
+.like{
+    color: #555;
+    margin-bottom: 29px !important;
+    margin-left: 10px;
+	}
+.ldc-ul_cont span{ right:-29px !important; font-weight: lighter !important; text-shadow: 0 0 0 #ffffff !important;}
+.a2a_svg{display: none !important;}
+.a2a_count{height: 50px !important; width: 50px !important; background: transparent none repeat scroll 0 0 !important;}
+.a2a_count:before{
+	border-style: none !important;
+}
+#recent-posts-5 ul li{
+	border-top: 1px solid #ddd;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+#recent-posts-5 ul{
+list-style: outside none none;
+    padding-left: 0;
+}
+
+#recent-posts-5 ul .post-date{
+	display: list-item !important;
+	margin-bottom: 8px;
+	color: #777;
+}
+.tagcloud a{
+	border: 1px solid #bbb;
+    color: #555;
+    font-size: 13px !important;
+    padding: 5px 10px;
+	line-height: 40px;
+}
+.tagcloud a:hover{
+background: #555 none repeat scroll 0 0;
+    border-color: #555;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out 0s;
+}
+.eemail_caption{
+	color: #555;
+    margin-bottom: 15px;
+}
+#eemail_txt_email{
+	border: medium none;
+	height: 34px;
+	color: #999;
+	padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+	font-size: 14px;
+	background-color: #fff;
+}
+.form-control::-moz-placeholder {
+    color: #999;
+    opacity: 1;
+}
+#eemail_txt_Button{
+	background: #72c02c none repeat scroll 0 0;
+    border: 0 none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 6px 13px;
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.eemail_textbox{float: left;}
+.eemail_button{display:flex;}
+.google-adsenses{margin-top: 20px;}
+
+.eemail_textbox_class {
+    width: 175px !important;
+}
+.eemail_textbox_button {
+    width: 80px !important;
+}
+.a2a_menu a{
+color:#363335 !important;
+font-size: 14px !important;
+line-height: 20px !important;
+text-transform: inherit;
+text-transform: inherit;
+}
+.a2a_menu a:hover, .a2a_menu a:active, .a2a_menu a:focus{
+	color: #72c13c !important;
+}
+.main-page .eemail_textbox input{
+	background-color: #f7f7f7 !important;
+}
+.news-v3 .posted-info .auth-name::before{
+    content: "" !important;
+}
+.content-sm img { height: auto; max-width: 100%; }
+
+@media screen and (max-width : 480px){
+#comments .shortcode, .detail-page #placeholder3{
+	display: none;
+}
+	
+}

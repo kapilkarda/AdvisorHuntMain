@@ -1,0 +1,430 @@
+<div ng-controller="searchpro" class="pro-search-profile-page">
+ 	<div ng-if="prof == 0">
+       <div>No Pros Found</div>
+  	</div>
+  	<div ng-if="prof != 0" class="profile-search">
+
+  		<div class="interactive-slider-v1 img-v2" ng-if="prof.banner==''" style="background':'url({{banner_image_url+''+prof.banner}});">
+
+  			<div class="container profile-search-inner1">
+  				<div class="row">
+					<div ng-if="prof.profile_pic==''" class="col-md-2">
+						<img ng-src="{{profile_image_url+'no_image.jpg'}}" height="160" width="160"> 
+					</div>
+					<div ng-if="prof.profile_pic!=''" class="col-md-2">
+						<img ng-src="{{profile_image_url+''+prof.profile_pic}}" height="160" width="160"> 
+					</div>
+
+  					<div class="col-md-10">
+  						<div class="col-md-8">
+							<h2 class="profile-title margin-bottom-20" style="color:#FFF;">{{prof.name}}</h2>
+							<ul class="list-unstyled list-inline menu-icons-list">
+								<li class="btn-pro">
+									<a href="#" class="btn btn-u">PRO</a>	
+								</li>
+								<li class="menu-icons-review">
+									<strong>
+									<span ng-repeat="n in [1,2,3,4,5] | limitTo:5" class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span>
+									
+									{{reviews.length}} Reviews </strong>
+								</li>
+								<li class="menu-icons">|</li>
+								<li class="menu-icons"><strong>Review Me ></strong></li>
+							</ul>	
+  						</div>
+  						<div class="col-md-4 margin-top-10">
+  								<h2><a href="#" class="btn btn-u btn-quote"> Request for Quote</a></h2>
+  						</div>
+  						<div class="clearfix"></div>
+  					</div>
+  				</div>
+     		</div>					 
+		</div>
+  		 <div class="interactive-slider-v1 img-v2" ng-if="prof.banner!=''" ng-style={'background-image':'url({{banner_image_url+''+prof.banner}})'} style="background-image: url({{banner_image_url+''+prof.banner}});">
+
+  		 
+  			<div class="container profile-search-inner1">
+  				<div class="row">
+					<div ng-if="prof.profile_pic==''" class="col-md-2">
+						<img ng-src="{{profile_image_url+'no_image.jpg'}}" height="160" width="160"> 
+					</div>
+					<div ng-if="prof.profile_pic!=''" class="col-md-2">
+						<img ng-src="{{profile_image_url+''+prof.profile_pic}}" height="160" width="160"> 
+					</div>
+
+  					<div class="col-md-10">
+  						<div class="col-md-8">
+							<h3 class="profile-title margin-bottom-20 font-size-24" style="color:#FFF;">{{prof.name}}</h3>
+							<ul class="list-unstyled list-inline menu-icons-list">
+								<li class="btn-pro">
+									<a href="#" class="btn btn-u">PRO</a>	
+								</li>
+								<li class="menu-icons-review">
+									<strong>
+									<span ng-repeat="n in [1,2,3,4,5] | limitTo:5" class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span>
+									
+									{{reviews.length}} Reviews </strong>
+								</li>
+								<li class="menu-icons">|</li>
+								<li class="menu-icons"><strong>Review Me ></strong></li>
+							</ul>	
+  						</div>
+  						<div class="col-md-4">
+  								<h2><a href="#" class="btn btn-u btn-quote"> Request for Quote</a></h2>
+  						</div>
+  						<div class="clearfix"></div>
+  					</div>
+  				</div>
+     		</div>
+	 </div><!--interactive slideer -->
+	 		<div class="profnav">
+	 			<div class="container">
+	 				<div class="row">
+		 				<div class="col-md-6">
+			 				<div class = "navbar-header">
+								   <button data-target="#navbar-responsive-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="fa fa-bars"></span>
+									</button>
+		   					</div>  
+			 				<div class = "collapse navbar-collapse mega-menu  profile-search-nav header" id ="navbar-responsive-collapse">
+			  					<ul class="list-unstyled list-inline nav navbar-nav nav-tabs">
+									<li id="overviews" class="active"><a data-toggle="tab" role="tab" data-target="#overview">Overview</a></li>
+									<li id="projects" class="" ><a role="tab" data-toggle="tab" data-target="#project">Project</a></li>
+									<li id="blog" class=""><a role="tab" data-toggle="tab" data-target="#blogs">Blogs</a></li>
+									 <li id="review" class=""><a role="tab" data-toggle="tab" data-target="#reviews">Reviews</a></li>
+			  					</ul>
+			  				</div>
+		  				</div>
+		  				<div class="col-md-6">
+	  							<div class="sidebar_item pull-right">
+									<ul class="list-unstyled list-inline">
+										<li><span><i class="icon-append fa fa-phone"></i></span>&nbsp;&nbsp;{{formatPhoneNumber(prof.phone)}}
+										</li>
+										<li><a href="{{prof.website}}" target="_blank"><span><i class="icon-append fa fa-globe"></i></span>&nbsp;&nbsp;Website</a></li>
+									</ul>
+								</div>
+	  						</div>
+		  			</div>
+	  			</div><!-- profile-search -->
+  				</div>
+				<div id="container-prof" class="main-page container content-sm-ang">
+						<div class="row">
+						    <div class="col-md-3 col-sm-3 font-555">
+							    	<div id="primary" class="widget-area margin-bottom-20">
+							    		<div class="">
+									    	<h3> Professional Information</h3>
+									    	<hr>
+									    	<section class="row">
+									    		<div class=" col col-md-12 paddingR">
+	                                    			<i class="icon-append fa fa-user" style="padding-right:5px;"></i>Contact: James anederson</div>
+                            				</section>
+                            				
+									    	<section class="row prof-address">
+										    	<div class="col col-md-12 paddingR">
+	                                    			<i class="icon-append radius-3x fa fa-map-marker" style="padding-right:5px;"></i>Location:
+
+										    	{{prof.location[0].city_name}},
+										    	 {{prof.location[0].state_short_name}}, 
+										    	 {{prof.location[0].zip}}</div>
+											</section>
+											<section>	                		
+		                						<i class="fa fa-calendar"></i> {{current_year - prof.year_founded}} years in business
+											</section>
+									    	
+										    	
+										</div>
+									</div>
+							    <div id="primary" class="widget-area margin-bottom-20">
+								<ul class="list-unstyled list-inline text-center pro-social-link">
+								    <li class="menu-icons social_link"> <a data-original-title="Facebook" title="" data-placement="bottom" data-toggle="tooltip" class="fb tooltips" href="https://www.facebook.com/advisorhunter"></a> </li>
+								   <li class="menu-icons social_link"> <a data-original-title="Google Plus" title="" data-placement="bottom" data-toggle="tooltip" class="tooltips goo" href="#"></a></li>
+								    <li class="menu-icons social_link"><a data-original-title="Twitter" title="" data-placement="bottom" data-toggle="tooltip" class="tooltips twitt" href="#"></a></li>
+								    
+								    
+								 </ul>
+							     </div>
+									<div id="primary" class="widget-area margin-bottom-20">
+										<div class="widget-container ai_widget  pro-head">
+											<h2 class="widget-title headline-v2 bg-color-light"  type="button" data-toggle="collapse" data-target="#collapseServiceoffer" aria-expanded="false" aria-controls="collapseServiceoffer">Service Offered</h2>
+												<div class="collapse1 pro_content hideContent" id="collapseServiceoffer1">
+													<ul class="list-unstyled list-inline" ng-repeat="offer in getcompoffer">
+														<li><a href="" class="font-555">{{offer.name}}</a></li>
+													</ul>
+												</div>
+												<div ng-if="getcompoffer.length > 1" class="show-more text-left">
+	        										<a data-target="#">Show more</a>
+	    										</div>
+										</div>
+									</div>
+									<div id="primary" class="widget-area margin-bottom-20">
+										<div class="widget-container ai_widget  pro-head">
+											<h2 class="widget-title headline-v2 bg-color-light"  type="button" data-toggle="collapse" data-target="#collapseServiceArea" aria-expanded="false" aria-controls="collapseServiceArea">Service Area Offered</h2>
+												<div class="collapse1 pro_content hideContent" id="collapseServiceArea1">
+													<ul class="list-unstyled list-inline" ng-repeat="area in areas">
+															<li>
+																{{area.location[0].city_name+', '+area.location[0].state_short_name +', '+area.location[0].zip}}	
+															</li>
+															
+														</ul>
+												</div>
+												<div ng-if="areas.length>3" class="show-more text-left">
+	        										<a data-target="#">Show more</a>
+	    										</div>
+										</div>
+									</div>
+									<div id="primary" class="widget-area margin-bottom-20">
+										<div class="widget-container ai_widget  pro-head">
+											<div class="pro-head">
+												<h2 class="widget-title headline-v2 bg-color-light" data-toggle="collapse" data-target="#collapseLicens" aria-expanded="false" aria-controls="collapseLicens">Licensing</h2>
+											</div>
+											<div class="clearfix"></div>
+											<div class="pro_content hideContent" id="collapseLicens1">
+												<div ng-repeat="liecense in proLiecense" class="margin-top-10">
+													<div><b>{{liecense.s_accreditation}}</b></div>
+														<div>{{liecense.s_accreditation_hash}}</div>
+														<div>{{liecense.s_license_details}}</div>
+														<div>Valid upto {{ liecense.dt_expiration | date : "MMM y" }}</div>
+														<div>{{liecense.state.name}}</div>
+														<hr style="margin:10px 0px;">
+												</div>
+											</div>
+											<div  ng-if="proLiecense.length > 1" class="show-more text-left" >
+					        							<a data-target="">Show more</a>
+					    					</div>
+										</div>
+
+									</div>
+									<div id="primary" class="widget-area margin-bottom-20">
+										<div class="area-location margin-bottom-30">
+													{{prof.location[0].latitude}}
+													{{prof.location[0].longitude}}
+									
+													<small><a href="https://maps.google.com/maps?q={{prof.location[0].latitude}},{{prof.location[0].longitude}} &hl=es;z=12&amp;output=embed" style="color:#0000FF;text-align:left" target="_blank">See map bigger</a></small>
+												
+										</div>
+									</div>
+									<!--<div id="primary" class="widget-area margin-bottom-20">
+										<ul class="list-unstyled list-inline text-center">
+											<li class="menu-icons social_link"> <a data-original-title="Facebook" title="" data-placement="bottom" data-toggle="tooltip" class="tooltips" href="https://www.facebook.com/advisorhunter"><i class="fa fa-facebook"></i></a> </li>&nbsp;&nbsp;
+				                            <li class="menu-icons social_link"> <a data-original-title="Skype" title="" data-placement="bottom" data-toggle="tooltip" class="tooltips" href="#"><i class="fa fa-skype"></i></a> </li>&nbsp;&nbsp;
+				                            <li class="menu-icons social_link"> <a data-original-title="Google Plus" title="" data-placement="bottom" data-toggle="tooltip" class="tooltips" href="#"><i class="fa fa-google-plus"></i></a> </li>&nbsp;&nbsp;
+				                            <li class="menu-icons social_link"> <a data-original-title="Linkedin" title="" data-placement="bottom" data-toggle="tooltip" class="tooltips" href="#"><i class="fa fa-linkedin"></i></a> </li>&nbsp;&nbsp;
+				                            <li class="menu-icons social_link"> <a data-original-title="Pinterest" title="" data-placement="bottom" data-toggle="tooltip" class="tooltips" href="#"><i class="fa fa-pinterest"></i></a> </li>
+										</ul>
+									</div>-->
+						    	</div>
+
+						    <div class="col-md-6 col-sm-6" id="content">
+						    	<div class="tab-content">
+								  <div id="overview" class="tab-pane fade in active">
+								
+								    <h3>Overview</h3>
+								    	<div class="contentview hideContentview"><p class='overview_about'>{{prof.about}}</p></div>
+								  		<div class="show text-right" ><a data-target="">Show more</a></div>
+								  </div>
+								  
+								  <div id="project" class="tab-pane fade">
+									<h3 class="">{{projects.length}} Projects</h3>
+									<div ng-repeat="project in projects">
+										<div class="col-md-6">
+											<div class="thumbnails thumbnail-style thumbnail-kenburn"> 
+												<div ng-if="project.images==0" class="thumbnail-img">
+													<div class="overflow-hidden">
+														<img ng-src="{{project_image_url+'no_image.jpg'}}" height="186" width="250">
+													</div>
+													<a class="btn-more hover-effect" href="#">read more +</a>
+												</div>
+
+												<div ng-if="project.images.length>0" ng-repeat="image in project.images  track by $index">
+													
+													<div ng-if="$index==0" class="thumbnail-img">
+														<div class="overflow-hidden">
+															<img ng-src="{{project_image_url+''+image.s_image}}" height="186" width="250">
+														</div> 
+														<a class="btn-more hover-effect" href="#">read more +</a>
+													</div>
+
+												</div>
+												<div class="caption">
+													<h4><a href="" class="font-555">{{project.s_name | limitTo: 25}} </a></h3>
+													<div>{{project.images.length+" Photos"}}</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="blogs" class="tab-pane fade">
+								    <h3>Blogs</h3>
+								    <p>NO Blogs</p>
+								  </div>
+								 <div id="reviews" class="tab-pane fade">
+								    <h3 class="margin-bottom-20"><div ng-show="reviews">{{reviews.length}} Review(s) for {{prof.name}}</div><div ng-show="!reviews">0 Review(s) for {{prof.name}}</div> </h3>
+									 <div ng-show="reviews">
+										 <div class="margin-bottom-30 sky-form" ng-repeat="review in reviews">
+											<div id="review_head" class="review_head  margin-bottom-10">
+												<div class="row">
+													<div class="col-sm-2 text-center paddingR">
+															<img class="margin-bottom-10" ng-src="assets/img/user.png" height="50" width="50"></br>
+													</div>
+													<div class="rating col-sm-9 paddingL">
+														<div class="margin-bottom-10" ng-init="tooltip=false">
+															<span class="font-555 font-size-14 review-user-name">Villiam Jose, CA, 95113</span>
+															<div class="rating" ng-mouseover="tooltip=true" ng-mouseleave="tooltip=false">
+																<label><span ng-repeat="n in review.ratings" class="fa fa-star" style="color:#72C02C"></span>
+																<span ng-repeat="n in [1,2,3,4,5] | limitTo:5-review.ratings.length" class="fa fa-star" style="color:#ccc"></span></label>
+															</div>
+															<div class="tooltip rating" ng-show="tooltip">
+																<div class="row Qow">
+																<div class="col-sm-6"><h5>Quality of Work</h5></div>
+																<div class="col-sm-6 text-center"><label><span ng-repeat="n in review.ratings" class="fa fa-star" style="color:#72C02C"></span>
+																<span ng-repeat="n in [1,2,3,4,5] | limitTo:5-review.ratings.length" class="fa fa-star" style="color:#ccc"></span><label></div></div>
+																<div class="row Exp">
+																<div class="col-sm-6"><h5>Expertise</h5></div>
+																<div class="col-sm-6 text-center"><label><span ng-repeat="n in review.ratings" class="fa fa-star" style="color:#72C02C"></span>
+																<span ng-repeat="n in [1,2,3,4,5] | limitTo:5-review.ratings.length" class="fa fa-star" style="color:#ccc"></span><label></div></div>
+																<div class="row prof">
+																<div class="col-sm-6"><h5>Professionalism </h5></div>
+																<div class="col-sm-6 text-center"><label><span ng-repeat="n in review.ratings" class="fa fa-star" style="color:#72C02C"></span>
+																<span ng-repeat="n in [1,2,3,4,5] | limitTo:5-review.ratings.length" class="fa fa-star" style="color:#ccc"></span><label></div></div>
+																<div class="row price">
+																<div class="col-sm-6"><h5>Price</h5></div>
+																<div class="col-sm-6 text-center"><label><span ng-repeat="n in review.ratings" class="fa fa-star" style="color:#72C02C"></span>
+																<span ng-repeat="n in [1,2,3,4,5] | limitTo:5-review.ratings.length" class="fa fa-star" style="color:#ccc"></span><label></div></div>
+																<div class="row Woa">
+																<div class="col-sm-6"><h5>Would Hire Again</h5></div>
+																<div class="col-sm-6 text-center"><label><span ng-repeat="n in review.ratings" class="fa fa-star" style="color:#72C02C"></span>
+																<span ng-repeat="n in [1,2,3,4,5] | limitTo:5-review.ratings.length" class="fa fa-star" style="color:#ccc"></span><label></div></div>
+															</div>
+														</div>
+													</div>
+												</div>
+													<div class="pro-company-review">
+														<div class="procontentreview hideContentreview">{{review.s_review_comment}}</div>
+														<div  ng-if="review.s_review_comment.length >260" class="showreview text-right" ><a data-target="">Show more</a></div>
+													</div>
+											</div>
+											<hr>
+										</div>
+										</div>
+									 <div ng-show="!reviews">
+										No reviews
+									 </div>
+								 </div>
+							</div>		 
+						</div>
+						    <div class="col-md-3 col-sm-3">
+						    	<div id="secondary" class="sky-form">
+						    		<div class="font-size-15 margin-bottom-10"><h3><div ng-show="reviews">{{reviews.length}} Reviews</div><div ng-show="!reviews">0 Reviews</div> </h3>
+						    			<!--{{rating_count / reviews.length}} {{avg_rating_count}}-->
+										<!--<div class="star-rating" star-rating rating-value="{{rating_count / reviews.length}}"-->
+
+											 <!--data-max="10" on-rating-selected="rateFunction(rating)"></div>-->
+										<div class="star-rating" star-rating rating-value="3.5"
+											 data-max="5" on-rating-selected="rateFunction(rating)">
+										</div>
+										<div class="font-skyblue">
+						    			<span class="glyphicon glyphicon-star "></span>
+						    			<span class="glyphicon glyphicon-star glyphicon-star"></span>
+						    			<span class="glyphicon glyphicon-star glyphicon-star"></span>
+						    			<span class="glyphicon glyphicon-star glyphicon-star"></span>
+						    			<span class="glyphicon glyphicon-star glyphicon-star"></span></div>
+						    		</div>
+							    	<div class="btn-write-review margin-bottom-20">
+								    	<a href="" class="btn btn-u" ng-click=AddReview()> Write a Review</a>
+								    </div>
+									<div ng-show="reviews">
+										<div class="margin-bottom-30" ng-repeat="review in reviews |limitTo:3">
+											<div class="review_head margin-bottom-10">
+												<div class="row">
+													<div class="col-sm-3">
+															<img ng-src="assets/img/user.png" height="45" width="45">
+													</div>
+													<div class="ratings col-sm-9 padd">
+													<div class="font-green margin-bottom-5 rating">
+															<label><span ng-repeat="n in review.ratings" class="fa fa-star" style="color:#72C02C"></span><span ng-repeat="n in [1,2,3,4,5] | limitTo:5-review.ratings.length" class="fa fa-star" style="color:#ccc"></span></label>
+
+														</div>
+														<div class="font-dark font-size-12 review-user-name"> Villiam Jose, CA, 95113</div>
+
+													</div>
+												</div>
+											</div>
+											<div class="pro-company-review">
+												<div>
+													{{review.s_review_comment| limitTo:98}}{{review.s_review_comment.length > 103? '...' : ''}}
+													<a ng-if="review.s_review_comment.length >98" href="" id="sign" class="font-green" data-toggle="tab" data-target="#reviews"> > </a>
+												</div>
+											</div>
+											<hr>
+
+										</div>
+									</div>
+									<div ng-show="!reviews">
+										No Reviews
+									</div>
+						    	</div>
+						    </div>
+						</div>
+					</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+$(document).on("click", "#sign", function() {
+        $("#overviews").removeClass("active");
+        $("#projects").removeClass("active");
+        $("#blog").removeClass("active");
+        $("#review").addClass("active");
+
+});
+</script>
+<script type="text/javascript">
+$(document).on("click", ".show a", function() {
+    var $this = $(this); 
+    var $content = $this.parent().prev("div.contentview ");
+    var linkText = $this.text().toUpperCase();    
+    
+    if(linkText === "SHOW MORE"){
+        linkText = "Show less";
+        $content.switchClass("hideContentview", "showContentview", 400);
+    } else {
+        linkText = "Show more";
+        $content.switchClass("showContentview", "hideContentview", 400);
+    };
+
+    $this.text(linkText);
+});	
+</script>
+<script type="text/javascript">
+$(document).on("click", ".showreview a", function() {
+    var $this = $(this); 
+    var $content = $this.parent().prev("div.procontentreview");
+    var linkText = $this.text().toUpperCase();    
+    if(linkText === "SHOW MORE"){
+        linkText = "Show less";
+        $content.switchClass("hideContentreview", "showContentreview", 400);
+    } else {
+        linkText = "Show more";
+        $content.switchClass("showContentreview", "hideContentreview", 400);
+    };
+    $this.text(linkText);
+});
+</script>
+<script type="text/javascript">
+$(document).on("click", ".show-more a", function() {
+    var $this = $(this); 
+    var $content = $this.parent().prev("div.pro_content");
+    var linkText = $this.text().toUpperCase();    
+    
+    if(linkText === "SHOW MORE"){
+        linkText = "Show less";
+        $content.switchClass("hideContent", "showContent", 400);
+    } else {
+        linkText = "Show more";
+        $content.switchClass("showContent", "hideContent", 400);
+    };
+
+    $this.text(linkText);
+});
+</script>

@@ -1,0 +1,98 @@
+<div ng-controller="myprofile"> 
+             <div class="tag-box tag-box-v2 ">   
+                <div class="modal-header1">
+                    <button type="button" class="close" data-dismiss="modal"  ng-click="$dismiss('cancel')">&times;</button>
+                    <h4 class="modal-title">Business Contact</h4>                  
+                        Provide your company's contact info so your customers may easily get a hold of you.
+                </div>
+                <div class="modal-body">
+                    <form class="sky-form" name="userForm" novalidate>
+                        <fieldset>
+                                <section>
+                                Phone
+                                    <label class="input" ng-class="{ 'has-error' : userForm.phone.$invalid && !userForm.phone.$pristine }">    
+                                        <i class="icon-append fa fa-phone"></i>
+                                        <input type="tel" placeholder="Phone" name="phone" ng-model="prof.phone" ng-minlength="10" ng-maxlength="10">
+                                        <p ng-show="userForm.phone.$error.minlength" class="help-block">Phone must be 10 digits</p>
+                                        <p ng-show="userForm.phone.$error.maxlength" class="help-block">Phone must be 10 digits</p>
+                                     <!--    <p ng-show="userForm.phone.$invalid && !userForm.phone.$pristine" class="help-block">Enter a valid phone.</p> -->
+                                    </label>
+                                </section>
+                                <section>
+                                Mobile
+                                    <label class="input" class="input" ng-class="{ 'has-error' : userForm.mobile.$invalid && !userForm.mobile.$pristine }">    
+                                        <i class="icon-append fa fa-phone"></i>
+                                        <input type="tel" placeholder="mobile" name="mobile" ng-model="prof.mobile" ng-minlength="10" ng-maxlength="10">
+                                        <p ng-show="userForm.mobile.$error.minlength" class="help-block">Mobile must be 10 digits</p>
+                                        <p ng-show="userForm.mobile.$error.maxlength" class="help-block">Mobile must be 10 digits</p>
+                                 <!--        <p ng-show="userForm.mobile.$invalid && !userForm.mobile.$pristine" class="help-block">Enter a valid mobile.</p> -->
+                                    </label>
+                                </section>
+                                <!-- <section>
+                                Personal E-mail
+                                    <label class="input">                                  
+                                        <i class="icon-append fa fa-envelope"></i>
+                                        <input type="email" placeholder="Personal E-mail" name="email" readonly>
+                                    </label>
+                                </section> -->
+                                <section>
+                                    Company E-mail
+                                    <label class="input" class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">                                  
+                                        <i class="icon-append fa fa-envelope"></i>
+                                        <input type="email" name="email" placeholder="Company E-mail" ng-model="prof.email">
+                                        <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+                                    </label>
+                                </section>
+                               <!--  <section>
+                                    Send Lead Notification to MY:
+                                    <div class="inline-group">                              
+                                        <label class="radio"><input type="radio" checked="" name="radio-inline"><i class="rounded-x"></i>Company Email</label>
+                                        <label class="radio"><input type="radio" name="radio-inline"><i class="rounded-x"></i>Personal Email</label>
+                                    </div>
+                                </section> -->
+                                <section>
+                                Address
+                                    <label class="input">
+                                        <input type="text" placeholder="Address" ng-model="prof.address">
+                                    </label>
+                                </section>
+                                <div class="row">
+                                    <section class="col col-6">
+                                        Zip Code
+                                        <label class="input" ng-class="{ 'has-error' : userForm.zip.$invalid && !userForm.zip.$pristine }">
+                                            <input type="text" name="zip" placeholder="Zip code" ng-model="prof['location'][0].zip" ng-keyup="showCityState(prof['location'][0].zip)" ng-minlength="5" ng-maxlength="5">
+                                            <p ng-show="userForm.zip.$invalid && !userForm.zip.$pristine" class="help-block">Enter a valid zip</p>
+                                        </label>
+                                    </section>
+                                     <section class="col col-6">
+                                        City
+                                        <label class="input">
+                                            <input type="text" placeholder="City" ng-model="prof['location'][0].city_name" readonly>
+                                        </label>
+                                    </section>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-6">
+                                        State
+                                        <label class="input">
+                                            <input type="text" placeholder="State" ng-model="prof['location'][0].state_name" readonly>
+                                        </label>
+                                    </section>
+                                
+                                    <section class="col col-6">
+                                        Country
+                                        <label class="input">
+                                             <input type="text" placeholder="Country"  ng-model="prof['location'][0].country_name" readonly>
+                                        </label>
+                                    </section>
+                                    
+                                </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer text-right">
+                    <button type="button" class="btn btn-default btn-default" data-dismiss="modal" ng-click="$dismiss('cancel')">Cancel</button>
+                    <button type="button"class="btn btn-u btn-default" ng-click="updateProinfo()">Save</button>
+                </div>
+            </div>
+ </div>

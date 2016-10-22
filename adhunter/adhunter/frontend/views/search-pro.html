@@ -1,0 +1,180 @@
+<div ng-controller="searchpro" class="pro-search-page">
+		<div class="interactive-slider-v2 img-v1" style="background: url(&quot;assets/img/18.jpg&quot;) repeat scroll 0% 0% / 100% 100% transparent;">
+		    <div class="header-v6 header-classic-white">
+			    <div class="container">
+				    <h1 class="hero-title">BEST SERVICE PRO IN FREMONT,CA</h1>
+				    <p class="margin-bottom-30">"Our Analytics will Find Best Pro. "Guaranteed"</p>
+				    <div class="box-content">
+						<form class="">
+								<div class="input-group">
+									<input widht="100px" type="text" autocomplete="off" placeholder="Enter Zip" class="form-control" id="zipform-zipcode" ng-model="searchbyzip">
+									<span class="input-group-btn">
+										<a class=" btn-u btn-success btn-default" ng-click="search1();" > Go </a>
+									</span>
+								</div> 							
+						</form>
+					</div>
+				</div>
+		    </div>
+		</div>
+		<div class="main-page container content-sm-ang" id="container">
+			<div class="row">
+				<!-- start col-md-3 -->
+				<div class="col-md-3">
+					<div class="widget-area" id="primary" ng-repeat="maincategory in maincategories">
+						<div class="widget-container ai_widget margin-bottom-10" id="Filter_by_type">
+						<h2 class="widget-title headline-v2 bg-color-light" type="button" data-toggle="collapse" data-target="#{{maincategory.id}}" aria-expanded="false" aria-controls="collapseExample"><span>{{maincategory.name}}</span></h2>
+						  
+							  <div class="collapse" id="{{maincategory.id}}">
+								<ul class="list-unstyled" ng-repeat="subcategory in maincategory.subcategories">
+									<li><a href="#" class="font-555">{{subcategory.name}}</a></li>
+								</ul>
+							  </div>
+						</div>
+
+					</div>
+				</div><!-- End col-md-3-->
+
+				<!-- Start col-md-9 -->
+				<div class="col-md-9 padding">
+					
+					<div  id="content" class="margin-bottom-20">
+						<div class="pro-search-headercontent">
+							<div scopeid="breadcrumbs">			
+								<ul class="breadcrumb">			
+									<li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="breadcrumb-item ">
+										<a compid="breadcrumblink">
+											<span itemprop="title">All Professionals</span>
+										</a>
+									</li>						
+								</ul>
+							</div>
+									<h2>{{pros.length}} <span class="search-keyword">{{selectedzip[0].state_name}},{{selectedzip[0].state_short_name}}</span> Architects & Buliding Designers</h2>
+											<div class="pro-searchcat-description margin-bottom-20">
+												The work of a professional can make all the difference. Whether your home has 10 bedrooms, or your apartment is 800 square feet, it can be tricky to create a cohesive look that is representative of your style. That's where a local Pune interior designer comes in. A home decorator will help distill your tastes and ideas into a design that suits the needs of your space.
+											
+										</div>					
+							</div> <!-- pro-search-headercontent-->
+						<div id="searchbar" class="proSearchBar">
+				
+							<ul class="form-inline list-unstyled list-inline">
+								<li class="searchcatinput">
+									<input type="text" value="" placeholder="architect," id="proKeywordSearch" class="text-center" ng-model="search">
+								</li>
+								<li class="form-group">
+									<label class="control-label">near</label>
+      								<input type="text" value="Pune, IN" placeholder="city" id="proLocationSearch" class="text-center input-mini">
+								</li>
+								<li class="form-group text-group">
+									<p class="form-control-static text-m">within</p>
+								</li>
+								<li class="form-group">
+									<div class="inline-dropdown-container">
+										<div class="dropdown-wrapper-2" style="width: 115px;">
+											<span class="dropdown-label-icon"></span>
+											<span class="dropdown-icon"></span>
+											<select tabindex="3" class="form-control" id="proDistanceFilter" style="width: 100%; height: 100%;">
+												<option value="">Anywhere</option>
+												<option value="100">100 miles</option>
+												<option selected="" value="50">50 miles</option>
+												<option value="25">25 miles</option><option value="10">10 miles</option>						
+											</select>
+										</div>
+									</div>
+								</li>
+								<li class="form-group text-group">
+									<p class="form-control-static text-m">sort&nbsp;by</p>
+								</li>
+								<li class="form-group">
+									<div class="inline-dropdown-container">
+										<div class="dropdown-wrapper-2" style="width: 115px;">
+											<span class="dropdown-label-icon"></span>
+											<span class="dropdown-icon"></span>
+											<select class="form-control" tabindex="4" id="proSortFilter" style="width: 100%; height: 100%;">
+												<option value="default">Best Match</option>
+												<option value="sortReviews">Most Reviewed</option>
+												<option value="sortRecentReviews">Recently Reviewed</option>
+											</select>
+										</div>
+									</div>
+								</li>
+							</ul>
+			
+						</div><!-- proSearchBar -->
+
+					<hr>				
+					<div ng-if="pros == 0">
+						<div>No Pros Found</div>
+					</div>
+					<div ng-if="pros != 0">
+						<div dir-paginate="pro in pros |filter:search| itemsPerPage:2">
+
+							<div class="row">
+								<div class="col-sm-5 sm-margin-bottom-20">
+									<img width="300" height="200" alt="Tips to turn your staircase dead space into a playroom" class="img-responsive full-width wp-post-image" src="assets/img/Playroom-300x200.jpg" {{pro.banner}}>
+										<div class="clear"></div>
+								</div>
+								<div class="col-sm-7 news-v3">
+									<div class="news-v3-in-sm no-padding">
+										<div class="row pro-header margin-bottom-10">
+											<div class="ad_pro_img col-md-2">
+												<img ng-src="assets/img/user.png" height="55" width="55">
+											</div>
+											<div class="pro-info col-md-10 paddingL">
+												<h2 class="entry-title"><a ui-sref="pro({proid: pro.id})">{{pro.name| limitTo: 30}}{{pro.name.length > 30? '...' : ''}}</a></h2>
+												<div class="pro-search-review">
+												<span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span>
+												<span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span>
+												<span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span>
+												<span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span>
+												<span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span>23 Reviews.</div>
+											</div>
+											
+										</div>
+										<div class="pro-content">
+											<div class="clearfix pro-content-header margin-bottom-10">
+												<div class="pro-content-addr pull-left	">
+													<div class="addr margin-bottom-10"><strong>{{pro.address}}</strong></div>
+													<span class="addr">16 miles from freemont</span>
+												</div>
+												<div class="pro-content-detbtn pull-right"><a class="btn btn-success btn-u" href="#">Get Quotes</a>
+												</div>
+											</div>
+											<div class="entry-content">{{pro.about| limitTo: 300}}{{pro.about.length > 300? '...' : ''}}
+												<span><a ui-sref="pro({proid: pro.id})">Read More ></a></span>
+											</div>
+
+										</div>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+								<hr>
+							</div>
+								
+						</div>  	<!-- Ng-repeat  -->
+						<div class="text-center">
+								<dir-pagination-controls
+		       											max-size="5"
+							       						direction-links="true"
+							       						boundary-links="true" >
+							    </dir-pagination-controls>
+					</div>
+					</div><!--content div -->
+							
+				</div>	
+
+						<p>List Your Business For Fress <a href="#">Load More</a></p>
+
+						<h5><strong>How do I find the {{Pro.city}} for my home design project</strong></h5>
+
+						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting
+
+						<h5><strong>What sort of process can I expect form residential architect</strong></h5>
+
+						 Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like.
+						</br>
+						  Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+				</div>
+			</div> <!--   main-page row-->
+		</div><!--   main-page containrer-->
+</div><!-- ng-controll-->

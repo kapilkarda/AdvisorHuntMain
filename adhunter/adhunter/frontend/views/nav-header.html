@@ -1,0 +1,46 @@
+ <header ng-controller="home">
+        <div class="header header-sticky nav-header">
+		<div class="container pro-nav-header">
+			<!-- Logo -->
+			<a href="#/" class="logo">
+				<img alt="Logo" src="assets/img/logo2-default.png">
+			</a>
+			<!-- End Logo -->
+                    <div class="header-inner-right" ng-hide="{{hideNav}}">
+                        <ul class="menu-icons-list list-unstyled list-inline text-right">
+							<li class="menu-icons" ng-class="{active:isActive('/logout')}" ng-show="loggedIn()" ng-click="logout()"  class="ng-hide">
+								<a href="">Logout</a>
+							</li>
+                            <li class="menu-icons" ng-hide="loggedIn()"><a class="nav-button" ng-click="login()"> Sign-in </a></li>
+                            <li class="menu-icons" ng-hide="loggedIn()">&nbsp;|&nbsp;</li>
+                            <li class="menu-icons" ng-hide="loggedIn()"><a class="nav-button" ng-click="register()"> Register </a></li>
+                            <li class="menu-icons">&nbsp;|&nbsp;</li>
+                            <li class="menu-icons social_link"> <a data-original-title="Facebook" title="" data-placement="bottom" data-toggle="tooltip" class="tooltips" href="https://www.facebook.com/advisorhunter"><i class="fa fa-facebook"></i></a> </li>&nbsp;&nbsp;
+                            <li class="menu-icons social_link"> <a data-original-title="Skype" title="" data-placement="bottom" data-toggle="tooltip" class="tooltips" href="#"><i class="fa fa-skype"></i></a> </li>&nbsp;&nbsp;
+                            <li class="menu-icons social_link"> <a data-original-title="Google Plus" title="" data-placement="bottom" data-toggle="tooltip" class="tooltips" href="#"><i class="fa fa-google-plus"></i></a> </li>&nbsp;&nbsp;
+                            <li class="menu-icons social_link"> <a data-original-title="Linkedin" title="" data-placement="bottom" data-toggle="tooltip" class="tooltips" href="#"><i class="fa fa-linkedin"></i></a> </li>&nbsp;&nbsp;
+                            <li class="menu-icons social_link"> <a data-original-title="Pinterest" title="" data-placement="bottom" data-toggle="tooltip" class="tooltips" href="#"><i class="fa fa-pinterest"></i></a> </li>
+                        </ul>
+                    </div><!--header-inner-right-->
+			<!-- Toggle get grouped for better mobile display -->
+			<button data-target=".navbar-responsive-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="fa fa-bars"></span>
+			</button>
+			<!-- End Toggle -->
+		</div><!--/end container-->
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
+			<div class="container">
+				<ul class="nav navbar-nav">
+					<li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#/" aria-expanded="true">Home</a></li>
+					<li class="dropdown" ng-class="{ active: current.url == '/pro/:proid'}" ng-class="{ active:isActive('/search')}"><a data-toggle="dropdown" class="dropdown-toggle" href="#/search" aria-expanded="false">Find Pro</a></li>
+					<li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="javascript:void(0);" aria-expanded="false">Blog</a></li>
+                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="javascript:void(0);" aria-expanded="false">Contact</a></li>
+				</ul>
+			</div><!--/end container-->
+		</div><!--/navbar-collapse-->
+	</div>
+	
+    </header>

@@ -1,0 +1,87 @@
+<div ng-controller="signup">
+    <div class="tag-box tag-box-v2 margin-bottom-40">
+        <div class="modal-header">
+            <img class="shrink-logo" src="assets/img/logo2-default.png" alt="Logo">
+            <button type="button" class="close" data-dismiss="modal" ng-click="$dismiss('cancel')">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="margin-bottom-10">
+                <h3><strong>Create Your Account</strong></h3>
+                <p>Are You Professional? <a ui-sref="proaccount.pro-signup" ng-click="$dismiss('cancel')">Pro Sign Up </a></p>
+            </div>
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <form name="Register" class="form-signin sky-form" role="form" ng-submit="signup()">
+                        <section>
+                            <label class="input" ng-class="{ 'has-success': !error['first_name'] && submitted,'state-error': error['first_name'] && submitted }">
+								<i class="icon-prepend fa fa-user"></i>
+							 	<input ng-model="userModel.first_name" type="text" id="loginform-first_name" class="form-control" placeholder="FirstName">
+							 	<b class="tooltip tooltip-bottom-right">Need To Enter First Name</b>
+			            	</label> 
+			            	<em class="help-block help-block-error">{{ error['first_name'] }}</em>
+                        </section>
+                        <section>
+                            <label class="input" ng-class="{ 'has-success': !error['last_name'] && submitted, 'state-error': error['last_name'] && submitted }" class="field-loginform-last_name required">
+								<i class="icon-prepend fa fa-user"></i>
+								<input ng-model="userModel.last_name" type="text" id="loginform-last_name" class="form-control" placeholder="Lastname">
+								<b class="tooltip tooltip-bottom-right">Needed To Enter Last Name</b>
+	                    	</label> 
+	                    	<em class="help-block help-block-error">{{ error['last_name'] }}</em>
+                        </section>
+                        <section>
+                            <label class="input" ng-class="{ 'has-success': !error['email'] && submitted,
+			                            'state-error': error['email'] && submitted }" class="field-loginform-email required">
+										<i class="icon-prepend fa fa-envelope" aria-hidden="true"></i>
+										<input ng-model="userModel.email" type="email" id="loginform-email" class="form-control" placeholder="Email">
+										<b class="tooltip tooltip-bottom-right">Needed To Enter Email Address</b>   
+						</label> <em class="help-block help-block-error">{{ error['email'] }}</em>
+                        </section>
+                        <section>
+                            <label class="input" ng-class="{ 'has-success': !error['password'] && submitted,
+			                            'state-error': error['password'] && submitted }" class="field-loginform-password required">
+										<i class="icon-prepend fa fa-lock" aria-hidden="true"></i>
+										<input ng-model="userModel.password" type="password" id="loginform-password" class="form-control" placeholder="password">
+										<b class="tooltip tooltip-bottom-right">Needed To Enter Password</b>
+						</label> <em class="help-block help-block-error">{{ error['password'] }}</em>
+                        </section>
+
+                        <section>
+                            <label class="input" ng-class="{ 'has-success': !error['repeat_password'] && submitted,
+			                            'state-error': error['repeat_password'] && submitted }" class="field-loginform-repeat_password required">
+										<i class="icon-prepend fa fa-repeat" aria-hidden="true"></i>
+										<input ng-model="userModel.repeat_password" type="password" id="loginform-repeat_password" class="form-control" placeholder="Confirm Password">
+										<b class="tooltip tooltip-bottom-right">Needed To Enter Confirm Password</b>
+			                        	<div ng-class="{ 'has-success': !error['repeat_password'] && submitted,
+			                            'has-error': error['repeat_password'] && submitted }"
+			                             class="form-group field-loginform-repeat_password required">
+			                            </div>               
+	                 	</label><em class="help-block help-block-error">{{ error['repeat_password'] }}</em>
+                        </section>
+                        <section>
+                            <div class="field-pro-signup-form-terms required" ng-class="{ 'has-success': !error['terms'] &amp;&amp; submitted,
+								                          'has-error': error['terms'] &amp;&amp; submitted }">
+                            </div>
+                            <label ng-class="{ 'has-success': !error['terms'] &amp;&amp; submitted,
+							                            'state-error': error['terms'] &amp;&amp; submitted }" class="checkbox"><input type="checkbox" ng-model="userModel.terms" class="ng-pristine ng-untouched ng-valid ng-empty"><i></i>Read Terms & conditons</label>
+                            <em class="help-block help-block-error ng-binding"></em>
+                        </section>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn-u btn-fullWidth"><span class="glyphicon glyphicon-ok"></span>Confirm your Account
+									</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div is="null" class="col-sm-12 margin-bottom-20">Already Have Register Account? &nbsp;&nbsp;&nbsp;<a ng-controller="home" ng-click="login()">Login here</a></div>
+                <div is="null" class="authForm-facebook-button-divider"><span is="null" class="authForm-facebook-button-text">or</span></div>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <button type="submit" class="btn btn-primary btn-fullWidth" name="login-button">Sign-Up with Facebook</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

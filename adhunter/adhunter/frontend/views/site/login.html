@@ -1,0 +1,28 @@
+<div class="jumbotron text-center">
+	 <h1>Login-Form</h1>
+    <form name="Login" class="form-horizontal" role="form" action="" ng-controller="myLoginCtrl" ng-submit="submitForm()" action="">
+      
+            <div class="form-group">
+                <label for="s_phone_mobile" class="col-sm-2 control-label">Mobile</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="s_phone_mobile" placeholder="Mobile-Phone" ng-model="form.s_phone_mobile">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="password" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-4">
+                    <input type="password" class="form-control" id="password" placeholder="Password" ng-model="form.password">
+                </div>
+            </div>
+            
+           <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" value="submit" class="btn btn-success" ngClick="Submit">Create</button>
+              </div>
+            </div>
+            <div class="actions">
+                <a href="">Register for a free account</a>
+            </div>
+        </form>
+</div>

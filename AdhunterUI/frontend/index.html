@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- define angular app -->
+<html>
+<head>
+  <!-- CSS -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin" type="text/css" rel="stylesheet">
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/twitter-bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/plugins/jquery/css/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/headers/header-v6.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/headers/header-default.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/footers/footer-v6.css" rel="stylesheet" type="text/css">  
+    <link href="assets/css/footers/footer-v1.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/app.css" rel="stylesheet" type="text/css">
+    <link href="assets/plugins/animate.css" rel="stylesheet" type="text/css">
+    <!-- <link href="assets/css/blocks.css" rel="stylesheet"> -->
+    <link href="assets/css//profile/profile.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/site.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/sky-forms.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/custom-sky-forms.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/slider.css" rel="stylesheet" type="text/css">
+    
+</head>
+
+<body class="header-fixed header-fixed-space home_page adv"  ng-app="adhunterApp" >
+    <div class="loader"></div>
+    <div ui-view="header"></div>
+    <div ui-view="home"></div>
+    <div ui-view="customer"></div>
+    <div id="search-pro-page" ui-view="search-pro"></div>
+    <div id="profile-page" ui-view="pro"></div>
+    <div id="pro-account-header" ui-view="pro-account-header"></div>
+    <div id="pro-account-content" ui-view="pro-account"></div>
+    <div id="prouser-dashboard" ui-view="prouser-dashboard"></div>
+    <div id="form-views" ui-view="404"></div>
+    <div id="form-views" ui-view="401"></div>
+    <div ui-view></div>
+    <div ui-view="footer"></div>
+   
+<div id="topcontrol" style="position: fixed; bottom: 5px; right: 5px; opacity: 0; cursor: pointer;" title="Scroll Back to Top"></div>
+   <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="assets/jquery/jquery.js"></script>
+    <script type="text/javascript" src="assets/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="assets/angular/angular.js"></script>
+    <script type="text/javascript" src="assets/plugins/angular-validate.min.js"></script>
+    <script type="text/javascript" src="assets/angular/angular-cookies.js"></script>
+    <script type="text/javascript" src="assets/angular/ui-bootstrap.min.js"></script> 
+    <script type="text/javascript" src="assets/angular/ui-bootstrap-tpls-1.3.2.min.js"></script>
+        
+    <script type="text/javascript" src="assets/angular/angular-animate.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.min.js"></script>-->
+    <script type="text/javascript" src="assets/angular/angular-ui-router.js"></script>
+    <script type="text/javascript" src="assets/angular/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="assets/angular/count-to.js"></script>
+    <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+    <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+    <script type="text/javascript" src="assets/plugins/top-search.js"></script>
+    <script type="text/javascript" src="assets/plugins/dirPagination.js"></script>
+
+
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/services/services.js"></script>
+    <script type="text/javascript" src="app/controllers/home.js"></script>
+    <script type="text/javascript" src="app/controllers/auth.js"></script>
+    <script type="text/javascript" src="app/controllers/directive.js"></script>
+    <script type="text/javascript" src="app/controllers/leadquestion.js"></script>
+    <script type="text/javascript" src="app/controllers/register.js"></script>
+    <script type="text/javascript" src="app/controllers/getlocation.js"></script>
+    <script type="text/javascript" src="app/controllers/pro.js"></script>
+    <script type="text/javascript" src="app/controllers/pro-account.js"></script>
+    <script type="text/javascript" src="app/controllers/update.js"></script>
+    <script type="text/javascript" src="app/controllers/myprofile.js"></script>
+    <script type="text/javascript" src="app/controllers/prodashboard.js"></script>
+    <script type="text/javascript" src='assets/angular/moment.min.js'></script>
+    <script type="text/javascript" src='assets/angular/fullcalendar.min.js'></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap-slider.js"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+        var body = $('.interactive-slider-v2');
+        var backgrounds = [
+          'url(assets/img/slide-2.jpg)', 
+          'url(assets/img/18.jpg)'];
+        var current = 0;
+        function nextBackground() {
+            body.css('background',backgrounds[current = ++current % backgrounds.length]);
+            body.css('background-size', '100% 100%');
+            setTimeout(nextBackground, 5000);
+        }
+        setTimeout(nextBackground, 5000);
+        body.css('background', backgrounds[0]);
+    });
+  </script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> -->
+    <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+    <script type="text/javascript">
+        $(window).load(function() {
+            $(".loader").fadeOut("slow");
+        })
+    </script>
+
+</html>

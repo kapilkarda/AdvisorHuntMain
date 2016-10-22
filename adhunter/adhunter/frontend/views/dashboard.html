@@ -1,0 +1,18 @@
+
+<div ng-controller="dashboard" class="row">
+	<div ui-view="header"></div>
+ 	<!-- <div ui-view="provider"></div> -->
+ 	<div class="prouser-dashboard" ng-controller="prodashboard">
+		<div id="form-views" ui-view="provider"></div>
+	    <div id="form-views" ui-view="prouser-projects"></div>
+	    <div id="form-views" ui-view="prouser-contacts"></div>
+	    <div id="form-views" ui-view="prouser-mailbox"></div>
+	    <div id="form-views" ui-view="prouser-calender"></div>
+	    <div id="form-views" ui-view="prouser-invoice"></div>
+	    <div id="form-views" ui-view="prouser-token"></div>
+	    <div id="form-views" ui-view="prouser-referral"></div>
+	    <div id="form-views" ui-view="prouser-setting"></div>
+	</div>
+  	<div ui-view="customer"></div>
+  	<div ui-view="footer"></div>		
+</div>

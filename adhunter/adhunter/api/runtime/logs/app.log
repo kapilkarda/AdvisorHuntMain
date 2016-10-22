@@ -1,0 +1,684 @@
+2016-05-06 07:52:40 [192.168.0.134][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'The directory is not writable by the Web process: /var/www/html/Advisorhunter/adhunter/adhunter/api/web/assets' 
+
+in /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/web/AssetManager.php:213
+
+Stack trace:
+#0 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/di/Container.php(368): ReflectionClass->newInstanceArgs(Array)
+#3 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/di/Container.php(153): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/di/ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/web/View.php(223): yii\base\Application->getAssetManager()
+#8 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Component.php(130): yii\web\View->getAssetManager()
+#9 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2-debug/panels/AssetPanel.php(53): yii\base\Component->__get('assetManager')
+#10 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2-debug/LogTarget.php(54): yii\debug\panels\AssetPanel->save()
+#11 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2-debug/LogTarget.php(118): yii\debug\LogTarget->export()
+#12 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/log/Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#13 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#14 [internal function]: yii\log\Logger->flush(true)
+#15 {main}
+2016-05-06 07:52:40 [192.168.0.134][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'sachin'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.75 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at sachin Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'sachin'
+    'SERVER_ADDR' => '192.168.0.131'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.134'
+    'DOCUMENT_ROOT' => '/var/www/html/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REMOTE_PORT' => '52913'
+    'REDIRECT_URL' => '/Advisorhunter/adhunter/adhunter/api/web/v1/cities'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Advisorhunter/adhunter/adhunter/api/web/v1/cities'
+    'SCRIPT_NAME' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'PHP_SELF' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1462521160.14
+    'REQUEST_TIME' => 1462521160
+]
+2016-05-06 07:53:07 [192.168.0.56][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'The directory is not writable by the Web process: /var/www/html/Advisorhunter/adhunter/adhunter/api/web/assets' 
+
+in /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/web/AssetManager.php:213
+
+Stack trace:
+#0 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/di/Container.php(368): ReflectionClass->newInstanceArgs(Array)
+#3 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/di/Container.php(153): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/di/ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/web/View.php(223): yii\base\Application->getAssetManager()
+#8 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Component.php(130): yii\web\View->getAssetManager()
+#9 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2-debug/panels/AssetPanel.php(53): yii\base\Component->__get('assetManager')
+#10 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2-debug/LogTarget.php(54): yii\debug\panels\AssetPanel->save()
+#11 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2-debug/LogTarget.php(118): yii\debug\LogTarget->export()
+#12 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/log/Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#13 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#14 [internal function]: yii\log\Logger->flush(true)
+#15 {main}
+2016-05-06 07:53:07 [192.168.0.56][-][-][info][application] $_COOKIE = [
+    '_csrf' => '21a38d9ca1d21f91fae94f31fb64820b99b6d653efce87be0f37eb0ba3a66cf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"S-sB7YCKg-qA2mSEChrf43moyA6LwAoa\";}'
+    '_backendSessionId' => 'sg78egbgeb6mtli940b6v089d3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'sachin'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=21a38d9ca1d21f91fae94f31fb64820b99b6d653efce87be0f37eb0ba3a66cf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22S-sB7YCKg-qA2mSEChrf43moyA6LwAoa%22%3B%7D; _backendSessionId=sg78egbgeb6mtli940b6v089d3'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at sachin Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'sachin'
+    'SERVER_ADDR' => '192.168.0.131'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.56'
+    'DOCUMENT_ROOT' => '/var/www/html/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REMOTE_PORT' => '49439'
+    'REDIRECT_URL' => '/Advisorhunter/adhunter/adhunter/api/web/v1/cities'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Advisorhunter/adhunter/adhunter/api/web/v1/cities'
+    'SCRIPT_NAME' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'PHP_SELF' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1462521187.797
+    'REQUEST_TIME' => 1462521187
+]
+2016-05-06 08:14:37 [192.168.0.56][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'The directory is not writable by the Web process: /var/www/html/Advisorhunter/adhunter/adhunter/api/web/assets' 
+
+in /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/web/AssetManager.php:213
+
+Stack trace:
+#0 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/di/Container.php(368): ReflectionClass->newInstanceArgs(Array)
+#3 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/di/Container.php(153): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/di/ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/web/View.php(223): yii\base\Application->getAssetManager()
+#8 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Component.php(130): yii\web\View->getAssetManager()
+#9 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2-debug/panels/AssetPanel.php(53): yii\base\Component->__get('assetManager')
+#10 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2-debug/LogTarget.php(54): yii\debug\panels\AssetPanel->save()
+#11 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2-debug/LogTarget.php(118): yii\debug\LogTarget->export()
+#12 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/log/Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#13 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#14 [internal function]: yii\log\Logger->flush(true)
+#15 {main}
+2016-05-06 08:14:37 [192.168.0.56][-][-][info][application] $_COOKIE = [
+    '_csrf' => '21a38d9ca1d21f91fae94f31fb64820b99b6d653efce87be0f37eb0ba3a66cf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"S-sB7YCKg-qA2mSEChrf43moyA6LwAoa\";}'
+    '_backendSessionId' => 'sg78egbgeb6mtli940b6v089d3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'sachin'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=21a38d9ca1d21f91fae94f31fb64820b99b6d653efce87be0f37eb0ba3a66cf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22S-sB7YCKg-qA2mSEChrf43moyA6LwAoa%22%3B%7D; _backendSessionId=sg78egbgeb6mtli940b6v089d3'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at sachin Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'sachin'
+    'SERVER_ADDR' => '192.168.0.131'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.56'
+    'DOCUMENT_ROOT' => '/var/www/html/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REMOTE_PORT' => '49517'
+    'REDIRECT_URL' => '/Advisorhunter/adhunter/adhunter/api/web/v1/cities'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Advisorhunter/adhunter/adhunter/api/web/v1/cities'
+    'SCRIPT_NAME' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'PHP_SELF' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1462522477.914
+    'REQUEST_TIME' => 1462522477
+]
+2016-05-06 08:15:41 [192.168.0.56][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'The directory is not writable by the Web process: /var/www/html/Advisorhunter/adhunter/adhunter/api/web/assets' 
+
+in /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/web/AssetManager.php:213
+
+Stack trace:
+#0 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/di/Container.php(368): ReflectionClass->newInstanceArgs(Array)
+#3 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/di/Container.php(153): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/di/ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/web/View.php(223): yii\base\Application->getAssetManager()
+#8 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Component.php(130): yii\web\View->getAssetManager()
+#9 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2-debug/panels/AssetPanel.php(53): yii\base\Component->__get('assetManager')
+#10 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2-debug/LogTarget.php(54): yii\debug\panels\AssetPanel->save()
+#11 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2-debug/LogTarget.php(118): yii\debug\LogTarget->export()
+#12 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/log/Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#13 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#14 [internal function]: yii\log\Logger->flush(true)
+#15 {main}
+2016-05-06 08:15:41 [192.168.0.56][-][-][info][application] $_COOKIE = [
+    '_csrf' => '21a38d9ca1d21f91fae94f31fb64820b99b6d653efce87be0f37eb0ba3a66cf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"S-sB7YCKg-qA2mSEChrf43moyA6LwAoa\";}'
+    '_backendSessionId' => 'sg78egbgeb6mtli940b6v089d3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'sachin'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=21a38d9ca1d21f91fae94f31fb64820b99b6d653efce87be0f37eb0ba3a66cf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22S-sB7YCKg-qA2mSEChrf43moyA6LwAoa%22%3B%7D; _backendSessionId=sg78egbgeb6mtli940b6v089d3'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at sachin Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'sachin'
+    'SERVER_ADDR' => '192.168.0.131'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.56'
+    'DOCUMENT_ROOT' => '/var/www/html/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REMOTE_PORT' => '49523'
+    'REDIRECT_URL' => '/Advisorhunter/adhunter/adhunter/api/web/v1/cities'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Advisorhunter/adhunter/adhunter/api/web/v1/cities'
+    'SCRIPT_NAME' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'PHP_SELF' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1462522541.043
+    'REQUEST_TIME' => 1462522541
+]
+2016-05-06 08:15:57 [192.168.0.56][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'echo' (T_ECHO), expecting function (T_FUNCTION)' in /var/www/html/Advisorhunter/adhunter/adhunter/api/modules/v1/controllers/CountryController.php:12
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-05-06 08:15:57 [192.168.0.56][-][-][info][application] $_COOKIE = [
+    '_csrf' => '21a38d9ca1d21f91fae94f31fb64820b99b6d653efce87be0f37eb0ba3a66cf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"S-sB7YCKg-qA2mSEChrf43moyA6LwAoa\";}'
+    '_backendSessionId' => 'sg78egbgeb6mtli940b6v089d3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'sachin'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=21a38d9ca1d21f91fae94f31fb64820b99b6d653efce87be0f37eb0ba3a66cf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22S-sB7YCKg-qA2mSEChrf43moyA6LwAoa%22%3B%7D; _backendSessionId=sg78egbgeb6mtli940b6v089d3'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at sachin Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'sachin'
+    'SERVER_ADDR' => '192.168.0.131'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.56'
+    'DOCUMENT_ROOT' => '/var/www/html/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REMOTE_PORT' => '49536'
+    'REDIRECT_URL' => '/Advisorhunter/adhunter/adhunter/api/web/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Advisorhunter/adhunter/adhunter/api/web/v1/countries'
+    'SCRIPT_NAME' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'PHP_SELF' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1462522557.748
+    'REQUEST_TIME' => 1462522557
+]
+2016-05-06 08:15:57 [192.168.0.56][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'The directory is not writable by the Web process: /var/www/html/Advisorhunter/adhunter/adhunter/api/web/assets' 
+
+in /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/web/AssetManager.php:213
+
+Stack trace:
+#0 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/di/Container.php(368): ReflectionClass->newInstanceArgs(Array)
+#3 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/di/Container.php(153): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/di/ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/web/View.php(223): yii\base\Application->getAssetManager()
+#8 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Component.php(130): yii\web\View->getAssetManager()
+#9 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2-debug/panels/AssetPanel.php(53): yii\base\Component->__get('assetManager')
+#10 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2-debug/LogTarget.php(54): yii\debug\panels\AssetPanel->save()
+#11 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2-debug/LogTarget.php(118): yii\debug\LogTarget->export()
+#12 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/log/Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#13 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#14 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/ErrorHandler.php(247): yii\log\Logger->flush(true)
+#15 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#16 {main}
+2016-05-06 08:15:57 [192.168.0.56][-][-][info][application] $_COOKIE = [
+    '_csrf' => '21a38d9ca1d21f91fae94f31fb64820b99b6d653efce87be0f37eb0ba3a66cf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"S-sB7YCKg-qA2mSEChrf43moyA6LwAoa\";}'
+    '_backendSessionId' => 'sg78egbgeb6mtli940b6v089d3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'sachin'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=21a38d9ca1d21f91fae94f31fb64820b99b6d653efce87be0f37eb0ba3a66cf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22S-sB7YCKg-qA2mSEChrf43moyA6LwAoa%22%3B%7D; _backendSessionId=sg78egbgeb6mtli940b6v089d3'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at sachin Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'sachin'
+    'SERVER_ADDR' => '192.168.0.131'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.56'
+    'DOCUMENT_ROOT' => '/var/www/html/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REMOTE_PORT' => '49536'
+    'REDIRECT_URL' => '/Advisorhunter/adhunter/adhunter/api/web/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Advisorhunter/adhunter/adhunter/api/web/v1/countries'
+    'SCRIPT_NAME' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'PHP_SELF' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1462522557.748
+    'REQUEST_TIME' => 1462522557
+]
+2016-05-06 08:16:42 [192.168.0.56][-][-][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'api\modules\v1\controllers\CountryController' in file: /var/www/html/Advisorhunter/adhunter/adhunter/api/modules/v1/controllers/CountryController.php. Namespace missing?' in /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\v1\\...')
+#1 [internal function]: spl_autoload_call('api\\modules\\v1\\...')
+#2 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Module.php(562): class_exists('api\\modules\\v1\\...')
+#3 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Module.php(520): yii\base\Module->createControllerByID('country')
+#4 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Module.php(512): yii\base\Module->createController('country/index')
+#5 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Module.php(448): yii\base\Module->createController('v1/country/inde...')
+#6 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/country/inde...', Array)
+#7 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /var/www/html/Advisorhunter/adhunter/adhunter/api/web/index.php(17): yii\base\Application->run()
+#9 {main}
+2016-05-06 08:16:42 [192.168.0.56][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.56
+2016-05-06 08:16:42 [192.168.0.56][-][-][info][application] $_COOKIE = [
+    '_csrf' => '21a38d9ca1d21f91fae94f31fb64820b99b6d653efce87be0f37eb0ba3a66cf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"S-sB7YCKg-qA2mSEChrf43moyA6LwAoa\";}'
+    '_backendSessionId' => 'sg78egbgeb6mtli940b6v089d3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'sachin'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=21a38d9ca1d21f91fae94f31fb64820b99b6d653efce87be0f37eb0ba3a66cf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22S-sB7YCKg-qA2mSEChrf43moyA6LwAoa%22%3B%7D; _backendSessionId=sg78egbgeb6mtli940b6v089d3'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at sachin Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'sachin'
+    'SERVER_ADDR' => '192.168.0.131'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.56'
+    'DOCUMENT_ROOT' => '/var/www/html/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REMOTE_PORT' => '49541'
+    'REDIRECT_URL' => '/Advisorhunter/adhunter/adhunter/api/web/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Advisorhunter/adhunter/adhunter/api/web/v1/countries'
+    'SCRIPT_NAME' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'PHP_SELF' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1462522602.308
+    'REQUEST_TIME' => 1462522602
+]
+2016-05-06 08:16:42 [192.168.0.56][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'The directory is not writable by the Web process: /var/www/html/Advisorhunter/adhunter/adhunter/api/web/assets' 
+
+in /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/web/AssetManager.php:213
+
+Stack trace:
+#0 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/di/Container.php(368): ReflectionClass->newInstanceArgs(Array)
+#3 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/di/Container.php(153): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/di/ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/web/View.php(223): yii\base\Application->getAssetManager()
+#8 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Component.php(130): yii\web\View->getAssetManager()
+#9 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2-debug/panels/AssetPanel.php(53): yii\base\Component->__get('assetManager')
+#10 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2-debug/LogTarget.php(54): yii\debug\panels\AssetPanel->save()
+#11 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2-debug/LogTarget.php(118): yii\debug\LogTarget->export()
+#12 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/log/Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#13 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#14 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#15 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\UnknownClassException))
+#16 {main}
+2016-05-06 08:16:42 [192.168.0.56][-][-][info][application] $_COOKIE = [
+    '_csrf' => '21a38d9ca1d21f91fae94f31fb64820b99b6d653efce87be0f37eb0ba3a66cf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"S-sB7YCKg-qA2mSEChrf43moyA6LwAoa\";}'
+    '_backendSessionId' => 'sg78egbgeb6mtli940b6v089d3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'sachin'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=21a38d9ca1d21f91fae94f31fb64820b99b6d653efce87be0f37eb0ba3a66cf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22S-sB7YCKg-qA2mSEChrf43moyA6LwAoa%22%3B%7D; _backendSessionId=sg78egbgeb6mtli940b6v089d3'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at sachin Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'sachin'
+    'SERVER_ADDR' => '192.168.0.131'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.56'
+    'DOCUMENT_ROOT' => '/var/www/html/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REMOTE_PORT' => '49541'
+    'REDIRECT_URL' => '/Advisorhunter/adhunter/adhunter/api/web/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Advisorhunter/adhunter/adhunter/api/web/v1/countries'
+    'SCRIPT_NAME' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'PHP_SELF' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1462522602.308
+    'REQUEST_TIME' => 1462522602
+]
+2016-05-06 08:17:06 [192.168.0.56][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'api\modules\v1\models\Country' not found' in /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/rest/IndexAction.php:61
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-05-06 08:17:06 [192.168.0.56][-][-][info][application] $_COOKIE = [
+    '_csrf' => '21a38d9ca1d21f91fae94f31fb64820b99b6d653efce87be0f37eb0ba3a66cf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"S-sB7YCKg-qA2mSEChrf43moyA6LwAoa\";}'
+    '_backendSessionId' => 'sg78egbgeb6mtli940b6v089d3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'sachin'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=21a38d9ca1d21f91fae94f31fb64820b99b6d653efce87be0f37eb0ba3a66cf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22S-sB7YCKg-qA2mSEChrf43moyA6LwAoa%22%3B%7D; _backendSessionId=sg78egbgeb6mtli940b6v089d3'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at sachin Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'sachin'
+    'SERVER_ADDR' => '192.168.0.131'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.56'
+    'DOCUMENT_ROOT' => '/var/www/html/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REMOTE_PORT' => '49547'
+    'REDIRECT_URL' => '/Advisorhunter/adhunter/adhunter/api/web/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Advisorhunter/adhunter/adhunter/api/web/v1/countries'
+    'SCRIPT_NAME' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'PHP_SELF' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1462522626.869
+    'REQUEST_TIME' => 1462522626
+]
+2016-05-06 08:17:06 [192.168.0.56][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'The directory is not writable by the Web process: /var/www/html/Advisorhunter/adhunter/adhunter/api/web/assets' 
+
+in /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/web/AssetManager.php:213
+
+Stack trace:
+#0 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/di/Container.php(368): ReflectionClass->newInstanceArgs(Array)
+#3 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/di/Container.php(153): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/di/ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/web/View.php(223): yii\base\Application->getAssetManager()
+#8 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/Component.php(130): yii\web\View->getAssetManager()
+#9 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2-debug/panels/AssetPanel.php(53): yii\base\Component->__get('assetManager')
+#10 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2-debug/LogTarget.php(54): yii\debug\panels\AssetPanel->save()
+#11 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2-debug/LogTarget.php(118): yii\debug\LogTarget->export()
+#12 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/log/Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#13 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#14 /var/www/html/Advisorhunter/adhunter/adhunter/vendor/yiisoft/yii2/base/ErrorHandler.php(247): yii\log\Logger->flush(true)
+#15 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#16 {main}
+2016-05-06 08:17:06 [192.168.0.56][-][-][info][application] $_COOKIE = [
+    '_csrf' => '21a38d9ca1d21f91fae94f31fb64820b99b6d653efce87be0f37eb0ba3a66cf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"S-sB7YCKg-qA2mSEChrf43moyA6LwAoa\";}'
+    '_backendSessionId' => 'sg78egbgeb6mtli940b6v089d3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'sachin'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=21a38d9ca1d21f91fae94f31fb64820b99b6d653efce87be0f37eb0ba3a66cf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22S-sB7YCKg-qA2mSEChrf43moyA6LwAoa%22%3B%7D; _backendSessionId=sg78egbgeb6mtli940b6v089d3'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at sachin Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'sachin'
+    'SERVER_ADDR' => '192.168.0.131'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.56'
+    'DOCUMENT_ROOT' => '/var/www/html/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REMOTE_PORT' => '49547'
+    'REDIRECT_URL' => '/Advisorhunter/adhunter/adhunter/api/web/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Advisorhunter/adhunter/adhunter/api/web/v1/countries'
+    'SCRIPT_NAME' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'PHP_SELF' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1462522626.869
+    'REQUEST_TIME' => 1462522626
+]
+2016-09-15 16:24:53 [::1][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The table does not exist: company_project in C:\wamp64\www\Advisorhunter\adhunter\adhunter\vendor\yiisoft\yii2\db\ActiveRecord.php:299
+Stack trace:
+#0 C:\wamp64\www\Advisorhunter\adhunter\adhunter\vendor\yiisoft\yii2\db\ActiveRecord.php(330): yii\db\ActiveRecord::getTableSchema()
+#1 C:\wamp64\www\Advisorhunter\adhunter\adhunter\vendor\yiisoft\yii2\db\BaseActiveRecord.php(427): yii\db\ActiveRecord->attributes()
+#2 C:\wamp64\www\Advisorhunter\adhunter\adhunter\vendor\yiisoft\yii2\db\BaseActiveRecord.php(269): yii\db\BaseActiveRecord->hasAttribute('scenario')
+#3 C:\wamp64\www\Advisorhunter\adhunter\adhunter\vendor\yiisoft\yii2\BaseYii.php(521): yii\db\BaseActiveRecord->__set('scenario', 'default')
+#4 C:\wamp64\www\Advisorhunter\adhunter\adhunter\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(api\modules\v1\models\CompanyProject), Array)
+#5 C:\wamp64\www\Advisorhunter\adhunter\adhunter\vendor\yiisoft\yii2\rest\CreateAction.php(46): yii\base\Object->__construct(Array)
+#6 [internal function]: yii\rest\CreateAction->run()
+#7 C:\wamp64\www\Advisorhunter\adhunter\adhunter\vendor\yiisoft\yii2\base\Action.php(92): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\Advisorhunter\adhunter\adhunter\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\Action->runWithParams(Array)
+#9 C:\wamp64\www\Advisorhunter\adhunter\adhunter\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('create', Array)
+#10 C:\wamp64\www\Advisorhunter\adhunter\adhunter\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('v1/companyproje...', Array)
+#11 C:\wamp64\www\Advisorhunter\adhunter\adhunter\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp64\www\Advisorhunter\adhunter\adhunter\api\web\index.php(17): yii\base\Application->run()
+#13 {main}
+2016-09-15 16:24:52 [::1][-][-][info][application] $_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '285'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop'
+    'CONTENT_TYPE' => 'text/plain;charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '23f13434-4d0b-cc47-c4ed-b8ae87dd265e'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,hi;q=0.6'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Git\\cmd;C:\\Program Files\\Java\\jdk1.8.0_102\\bin;%ANT_HOME%\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;${Env:LOCALAPPDATA}\\Android\\android-sdk\\tools;${Env:LOCALAPPDATA}\\Android\\android-sdk\\platform-tools;C:\\nodejs\\;C:\\Program Files (x86)\\PuTTY\\;C:\\Program Files\\Amazon\\AWSCLI\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\engineer master\\AppData\\Local\\Android\\android-sdk\\tools;C:\\Users\\engineer master\\AppData\\Local\\Android\\android-sdk\\platform-tools;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win64) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win64) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REMOTE_PORT' => '8417'
+    'REDIRECT_URL' => '/Advisorhunter/adhunter/adhunter/api/web/v1/companyprojects'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Advisorhunter/adhunter/adhunter/api/web/v1/companyprojects'
+    'SCRIPT_NAME' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'PHP_SELF' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1473956692.039
+    'REQUEST_TIME' => 1473956692
+]
+2016-09-16 05:30:43 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\Advisorhunter\adhunter\adhunter\vendor\yiisoft\yii2\web\Request.php:189
+Stack trace:
+#0 C:\wamp64\www\Advisorhunter\adhunter\adhunter\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\wamp64\www\Advisorhunter\adhunter\adhunter\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\Advisorhunter\adhunter\adhunter\api\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2016-09-16 05:30:43 [::1][-][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.1001559100.1471422435'
+    'PHPSESSID' => 'bm7nor40sas5rt8tgfb13i1o82'
+    'mm-email' => 'admin@admin.com'
+    '_csrf' => 'b65349c4eb195ee7f79b71da4522fc83a07e3287b254c778b3de3c44e4ac084ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"i7fR-I6LeMkbS73z9QmqkyZugs6-lmUG\";}'
+    '_backendSessionId' => '49j0nk1857tbjdo28auacvqqa0'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/Advisorhunter/AdhunterUI/frontend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,hi;q=0.6'
+    'HTTP_COOKIE' => '_ga=GA1.1.1001559100.1471422435; PHPSESSID=bm7nor40sas5rt8tgfb13i1o82; mm-email=admin%40admin.com; _csrf=b65349c4eb195ee7f79b71da4522fc83a07e3287b254c778b3de3c44e4ac084ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i7fR-I6LeMkbS73z9QmqkyZugs6-lmUG%22%3B%7D; _backendSessionId=49j0nk1857tbjdo28auacvqqa0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Git\\cmd;C:\\Program Files\\Java\\jdk1.8.0_102\\bin;%ANT_HOME%\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;${Env:LOCALAPPDATA}\\Android\\android-sdk\\tools;${Env:LOCALAPPDATA}\\Android\\android-sdk\\platform-tools;C:\\nodejs\\;C:\\Program Files (x86)\\PuTTY\\;C:\\Program Files\\Amazon\\AWSCLI\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\engineer master\\AppData\\Local\\Android\\android-sdk\\tools;C:\\Users\\engineer master\\AppData\\Local\\Android\\android-sdk\\platform-tools;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win64) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win64) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REMOTE_PORT' => '14250'
+    'REDIRECT_URL' => '/Advisorhunter/adhunter/adhunter/api/web/v1/zipcodes/location-by-zipcode/undefined'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Advisorhunter/adhunter/adhunter/api/web/v1/zipcodes/location-by-zipcode/undefined'
+    'SCRIPT_NAME' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'PHP_SELF' => '/Advisorhunter/adhunter/adhunter/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1474003843.326
+    'REQUEST_TIME' => 1474003843
+]

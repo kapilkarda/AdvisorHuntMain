@@ -1,0 +1,97 @@
+<div ng-controller="searchpro"> 
+             <div class="tag-box tag-box-v2 ">   
+                <div class="modal-header1">
+                    <button type="button" class="close" data-dismiss="modal"  ng-click="$dismiss('cancel')">&times;</button>
+                    <h4 class="modal-title">Review form</h4>                  
+                        A Project is a collection of photos of your own work or products. Projects are usually best organized by client, job site, or product line. 
+                </div>
+                 <form ng-submit="insertReview()" class="sky-form" id="write-review" novalidate="novalidate">
+                <div class="modal-body">
+
+                    <fieldset>
+                        <section>
+                            <div class="rating">
+                                <input type="radio" id="quality-5" name="quality" ng-model="reviewModel.quality" value="5">
+                                <label for="quality-5"><i class="fa fa-star"></i></label>
+                                <input type="radio" id="quality-4" name="quality" ng-model="reviewModel.quality" value="4">
+                                <label for="quality-4"><i class="fa fa-star"></i></label>
+                                <input type="radio" id="quality-3" name="quality" ng-model="reviewModel.quality" value="3">
+                                <label for="quality-3"><i class="fa fa-star"></i></label>
+                                <input type="radio" id="quality-2" name="quality" ng-model="reviewModel.quality" value="2">
+                                <label for="quality-2"><i class="fa fa-star"></i></label>
+                                <input type="radio" id="quality-1" name="quality" ng-model="reviewModel.quality" value="1">
+                                <label for="quality-1"><i class="fa fa-star"></i></label>
+                                Quality of Work
+                            </div>
+
+                            <div class="rating">
+                                <input type="radio" id="expertise-5" name="expertise" ng-model="reviewModel.expertise" value="5">
+                                <label for="expertise-5"><i class="fa fa-star"></i></label>
+                                <input type="radio" id="expertise-4" name="expertise" ng-model="reviewModel.expertise" value="4">
+                                <label for="expertise-4"><i class="fa fa-star"></i></label>
+                                <input type="radio" id="expertise-3" name="expertise" ng-model="reviewModel.expertise" value="3">
+                                <label for="expertise-3"><i class="fa fa-star"></i></label>
+                                <input type="radio" id="expertise-2" name="expertise" ng-model="reviewModel.expertise" value="2">
+                                <label for="expertise-2"><i class="fa fa-star"></i></label>
+                                <input type="radio" id="expertise-1" name="expertise" ng-model="reviewModel.expertise" value="1">
+                                <label for="expertise-1"><i class="fa fa-star"></i></label>
+                                Expertise
+                            </div>
+
+                            <div class="rating">
+                                <input type="radio" id="professionalism-5" name="professionalism" ng-model="reviewModel.professionalism" value="5">
+                                <label for="professionalism-5"><i class="fa fa-star"></i></label>
+                                <input type="radio" id="professionalism-4" name="professionalism" ng-model="reviewModel.professionalism" value="4">
+                                <label for="professionalism-4"><i class="fa fa-star"></i></label>
+                                <input type="radio" id="professionalism-3" name="professionalism" ng-model="reviewModel.professionalism" value="3">
+                                <label for="professionalism-3"><i class="fa fa-star"></i></label>
+                                <input type="radio" id="professionalism-2" name="professionalism" ng-model="reviewModel.professionalism" value="2">
+                                <label for="professionalism-2"><i class="fa fa-star"></i></label>
+                                <input type="radio" id="professionalism-1" name="professionalism" ng-model="reviewModel.professionalism" value="1">
+                                <label for="professionalism-1"><i class="fa fa-star"></i></label>
+                                Professionalism
+                            </div>
+                             <div class="rating">
+                                <input type="radio" id="price-5" name="price" ng-model="reviewModel.price" value="1">
+                                <label for="price-5"><i class="fa fa-star"></i></label>
+                                <input type="radio" id="price-4" name="price" ng-model="reviewModel.price" value="4">
+                                <label for="price-4"><i class="fa fa-star"></i></label>
+                                <input type="radio" id="price-3" name="price" ng-model="reviewModel.price" value="3">
+                                <label for="price-3"><i class="fa fa-star"></i></label>
+                                <input type="radio" id="price-2" name="price" ng-model="reviewModel.price" value="2">
+                                <label for="price-2"><i class="fa fa-star"></i></label>
+                                <input type="radio" id="price-1" name="price" ng-model="reviewModel.price" value="1">
+                                <label for="price-1"><i class="fa fa-star"></i></label>
+                                Price
+                            </div>
+                             <div class="rating">
+                                <input type="radio" id="hireagain-5" name="hireagain" ng-model="reviewModel.hireagain" value="1">
+                                <label for="hireagain-5"><i class="fa fa-star"></i></label>
+                                <input type="radio" id="hireagain-4" name="hireagain" ng-model="reviewModel.hireagain" value="4">
+                                <label for="hireagain-4"><i class="fa fa-star"></i></label>
+                                <input type="radio" id="hireagain-3" name="hireagain" ng-model="reviewModel.hireagain" value="3">
+                                <label for="hireagain-3"><i class="fa fa-star"></i></label>
+                                <input type="radio" id="hireagain-2" name="hireagain" ng-model="reviewModel.hireagain" value="2">
+                                <label for="hireagain-2"><i class="fa fa-star"></i></label>
+                                <input type="radio" id="hireagain-1" name="hireagain"ng-model="reviewModel.hireagain" value="1">
+                                <label for="hireagain-1"><i class="fa fa-star"></i></label>
+                                Would Hire Again
+                            </div>
+                        </section>
+                        <section>
+                            <label class="label"></label>
+                            <label class="textarea">
+                                <i class="icon-append fa fa-comment"></i>
+                                <textarea placeholder="Enter your comment" id="comment" name="comment" ng-model="reviewModel.s_review_comment" rows="8" required></textarea>
+                            </label>
+                        </section>
+                    </fieldset>
+
+                </div>
+                <div class="modal-footer text-right">
+                    <button type="button" class="btn-u btn-u-default" data-dismiss="modal" ng-click="$dismiss('cancel')">Cancel</button>
+                     <button class="btn-u" type="submit">Submit a review</button>
+                </div>
+                 </form>
+            </div>
+ </div>

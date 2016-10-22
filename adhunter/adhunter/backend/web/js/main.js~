@@ -1,0 +1,36 @@
+ 
+$(function(){
+
+	var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
+	   	$('.sidebar-menu li a').each(function() {
+		    if (this.href === path) { 
+		     $(this).closest( "li" ).addClass('active');
+		     $(this).closest( "li" ).parent().parent("li:first").addClass('active');
+		}
+	});
+
+    $("#add-license-btn").click(function(){
+    $("#license-modal").modal('show')
+            .find("#license-modal-content")
+            .load($(this).attr('value'));
+	});
+
+    $("#add-back-check-btn").click(function(){
+    $("#back-check-modal").modal('show')
+            .find("#back-check-modal-content")
+            .load($(this).attr('value'));
+	});
+
+    $("#add-area-btn").click(function(){
+    $("#add-area-modal").modal('show')
+            .find("#add-area-modal-content")
+            .load($(this).attr('value'));
+	});
+
+	$("#add-service-btn").click(function(){
+    $("#add-service-modal").modal('show')
+            .find("#add-service-modal-content")
+            .load($(this).attr('value'));
+	});
+});
+

@@ -1,0 +1,384 @@
+<div ng-controller="myprofile" ng-init="onLoad();" class="proaccount-edit-page">
+  	<div  class="profile-search pro-edit-profile">
+  		<div class="interactive-slider-v1 img-v2" style="background-image:url('{{banner_image_url+''+prof.banner}}'); no-repeat">
+  			<div class="container profile-search-inner1">
+  				<div class="row">
+					<div ng-if="prof.profile_pic==''" class="col-md-2">
+						<img ng-src="assets/img/user.png" height="160" width="160"> 
+						<!--<span class="upload-image-prof"><i ng-click="" class="fa fa-pencil"></i></span>-->
+					</div>
+					<div class="col-md-2">
+						<div ng-if="prof.profile_pic==''">
+							<img ng-src="assets/img/user.png" height="160" width="160">
+							<!--<span class="upload-image-prof"><i ng-click="" class="fa fa-pencil"></i></span>-->
+						</div>
+						<div ng-if="prof.profile_pic!=''">
+							<img ng-src="{{profile_image_url+''+prof.profile_pic}}" id="profile_image" ng-model="profile_image_model" height="160" width="160">
+						</div>
+						<div class="pull-right profimg">
+							<form id="uploadpicform" action="" method="post" enctype="multipart/form-data">
+								<label id="editpropic" class="btn-u fa fa-pencil">
+									<input type="file" name="file"  id="propic" style="display:none;" />
+								</label>
+								<input type="hidden" name="proidp" id="proidforpic"/>
+							</form>
+						</div>
+					</div>
+
+
+	  				<div class="col-md-10">
+	  						<div class="row">
+		  						<div class="col-md-8 voffset6">
+									<h1 class="profile-title  font-size-24 u-inline"><a  style="color:#FFF;" ui-sref="myprofile">{{prof.name}}</a></h1>
+										<span><i ng-click="(editCompanyName(prof.name,companyname))" class="fa fa-pencil"></i></span>
+									
+									<!-- <h5 class="profile-title" style="color:#FFF;">{{proServices[0].name}}
+										<span><i ng-click="editCategoriesName()" class="fa fa-pencil"></i></span>
+									</h5> -->
+									<!-- <h5 class="profile-title" style="color:#FFF;">{{prof['location'][0]['city_name']}}, {{prof['location'][0]['state_short_name']}}</h5> -->
+		  						</div>
+		  						<div class="col-md-4 text-right voffset7">
+		  							<form id="uploadbanner" method="post" enctype="multipart/form-data">
+		  								<input type="hidden" name="proid" id="proidforbanner">
+		  								<label id="editbanner"  class="btn-u fa fa-pencil">
+		  									<input  type="file" name="file" id="banner" required style="display:none;" />
+		  								</label>									
+										<!-- <input type="submit" value="Upload" class="submit" /> -->
+										</form>
+								</div>
+										
+		  					</div>
+	  					</div>
+  					</div>
+     			</div>		 
+			</div>
+					<div class="profnav">
+	 					<div class="container">
+	 						<div class="row">
+	 						<div class="col-md-6">
+		 						<div class = "navbar-header">
+							   		<button data-target="#navbar-responsive-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="fa fa-bars"></span>
+									</button>
+	   							</div>  
+		 						<div class = "collapse navbar-collapse mega-menu  profile-search-nav header" id ="navbar-responsive-collapse">
+		  							<ul class="list-unstyled list-inline nav navbar-nav nav-tabs">
+										<li id="overviews" class="active"><a data-toggle="tab" role="tab" data-target="#overview">Overview</a></li>
+										<li id="blog"><a role="tab" data-toggle="tab" data-target="#blogs">Blogs</a></li>
+										<li id="review"><a role="tab" data-toggle="tab" data-target="#reviews">Reviews</a></li>
+										</ul>
+		  						</div>
+	  						</div>
+	  						<div class="col-md-6">
+	  							<div class="sidebar_item pull-right">
+									<ul class="list-unstyled list-inline">
+										
+										<li><span><i class="icon-append fa fa-phone"></i></span>&nbsp;&nbsp;{{formatPhoneNumber(prof.phone)}}
+										</li>
+										<li><a href="{{prof.website}}" target="_blank"><span><i class="icon-append fa fa-globe"></i></span>&nbsp;&nbsp;Website</a></li>
+									</ul>
+								</div>
+	  						</div>
+	  					</div>
+	  					</div>
+  					</div>
+					<div>
+					    <ul class="breadcrumb">
+					    <li><a href="#">Home</a></li>
+					    <li><a href="#">State</a></li>
+					    <li><a href="#">City</a></li>
+					    <li><a href="#">Sub Category</a></li>
+					    <li><a href="#">Pro</a></li>
+					    <li><a href="#">Pro Name</a></li>
+					    </ul>
+					</div>
+			</div>
+
+	<div class="inner_content">
+		<div class="container content-sm-ang main-page">
+			<div class="row">
+				<div class="col-md-3">
+					<div id="primary" class="widget-area text-center margin-bottom-20">
+						<div class="font-size-15">
+							<div class="font-skyblue">
+								<span class="glyphicon glyphicon-star glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star glyphicon-star"></span>
+							</div>
+						</div>
+						<!--</div>-->
+	                		<div class="margin-bottom-20 text-center"><button class="btn-u btn-fullwidth">Request Reviews</button></div>
+		                <section  class="margin-bottom-10">
+		                		<span>Add BBB, Yelp, Google rating</span> <i class="fa fa-pencil" ng-click="addBbbRating()"></i>
+						</section>
+						<section>	                		
+		                	<i class="fa fa-calendar"></i> {{current_year - prof.year_founded}} years in business
+						</section>
+					</div>
+
+					<div id="primary" class="widget-area margin-bottom-20">
+						<div class="pro-head"><h2 class="widget-title headline-v2 bg-color-light pull-left" data-toggle="collapse" data-target="#collapseServices" aria-expanded="false" aria-controls="collapseServices">Service Offered <i ng-click="editServiceOffered()" class="fa fa-pencil pull-right" style="line-height:32px;"></i></h2><span class="pull-right"></span></div>
+						<div class="clearfix"></div>
+							<div class="collapse1 pro_content hideContent" id="collapseServices1">
+								<div ng-repeat="services in proServices">{{services.name}}</div>	
+							</div>
+						<div  ng-if="proServices.length > 1" class="show-more text-left"><a data-target="">Show more</a></div>
+					</div>
+					<div id="primary" class="widget-area margin-bottom-20">
+							<div class="pro-head">
+								<h2 class="widget-title headline-v2 bg-color-light pull-left" data-toggle="collapse" data-target="#collapseLicens" aria-expanded="false" aria-controls="collapseLicens">Licensing<i ng-click="addLicens()" class="fa fa-pencil pull-right" style="line-height:32px;"></i></h2>
+								
+							</div>
+							<div class="clearfix"></div>
+							<div class="collapse1 pro_content hideContent" id="collapseLicens1">
+								<div ng-repeat="liecense in proLiecense" class="margin-top-10">
+									<div><b>{{liecense.s_accreditation}}</b> <span><i ng-click="editLicense(liecense.pk_i_id)" class="fa fa-pencil"></i>&nbsp;<i ng-click="deleteLicense(liecense.pk_i_id)" class="fa fa-times"></i><span>
+									</div>
+									<div>{{liecense.s_accreditation_hash}}</div>
+									<div>{{liecense.s_license_details}}</div>
+									<div>Valid upto {{ liecense.dt_expiration | date : "MMM y" }}</div>
+									<div>{{liecense.state.name}}</div>
+									<hr style="margin:10px 0px;">
+								</div>
+							</div>
+							<div ng-if="proLiecense.length > 1" class="show-more text-left"><a data-target="">Show more</a></div>
+					</div>
+
+					<div id="primary"class="widget-area margin-bottom-20">
+									<div class="pro-head">
+										<h2 class="widget-title headline-v2 bg-color-light pull-left"  type="button" data-toggle="collapse" data-target="#collapseServiceArea1" aria-expanded="false" aria-controls="collapseServiceArea">Service Area <i ng-click="addServiceArea()" class="fa fa-pencil pull-right" style="line-height:32px;"></i></h2>
+										<span class="pull-right"></span>
+									</div>
+									<div class="clearfix"></div>
+									<div class="collapse1 pro_content hideContent" id="collapseServiceAre">
+										<ul class="list-unstyled list-inline" ng-repeat="area in areas">
+												<li>
+													{{area['location'][0].city_name}}, {{area['location'][0].state_short_name}}, {{area['location'][0].zip}}	
+													 <i ng-click="deleteArea(area['location'][0].id)" class="fa fa-times"></i>
+												</li>
+												
+											</ul>
+										</div>
+										<div ng-if="areas.length>3"class="show-more text-left">
+        									<a data-target="">Show more</a>
+    									</div>
+									</div>
+
+				</div>
+				<div class="col-md-6" id="content">
+					<div class="tab-content">
+						<div id="overview" class="tab-pane fade in active">
+							<section class="margin-bottom-10">
+								<div class="contentview hideContentview">
+									<h3 class="u-inline">About </h3><span><i ng-click="addAboutBusiness()" class="fa fa-pencil"></i></span>
+									<div class="margin-top-10"><p class="overview_about"> {{prof.about}}</p></div>
+								</div>
+								<div ng-if="prof.about.length > 600" class="show text-right" ><a data-target="">Show more</a></div>
+							</section>
+							<section >
+								<a href="{{prof.website}}" >
+									{{prof.website}}
+								</a>
+							</section>
+							<section class="margin-bottom-10 margin-top-20">
+								<!-- <h3 class="u-inline">Add Project</h3><span><i ng-click="addAboutBusiness()" class="fa fa-pencil pull-right"></i></span> -->
+								
+								<div class="clearfix"></div>
+								<div id="project" class="margin-top-20">
+									<h3 class="font-green">{{projects.length}} Projects</h3>
+									
+										<div class="col-md-6">
+											<div class="projects-wrapper">
+												<div class="wrapper-cell">
+												<div class="inn-wrapp">
+							                        <div class="new-object-plus"><i ng-click="addProject()" class="fa fa-plus"></i>
+							                        </div>
+							                        <div class="new-object-title">New Project</div>
+							                    </div>
+							                    </div>
+						                    </div>
+										</div>
+
+									<div ng-repeat="project in projects">
+										<div class="col-md-6">
+											<div class="thumbnails thumbnail-style thumbnail-kenburn"> 
+													<div ng-if="project.images==0" class="thumbnail-img">
+														<div class="overflow-hidden">
+															<img ng-src="{{project_image_url+'no_image.jpg'}}" height="186" width="250">
+														</div>
+														<a class="btn-more hover-effect" href="#">read more +</a>
+													</div>
+
+													<div ng-if="project.images.length>0" ng-repeat="image in project.images  track by $index">
+														
+														<div ng-if="$index==0" class="thumbnail-img">
+															<div class="overflow-hidden">
+																<img ng-src="{{project_image_url+''+image.s_image}}" height="186" width="250">
+															</div> 
+															<a class="btn-more hover-effect" href="#">read more +</a>
+														</div>
+													</div>
+													<div class="caption">
+														<h4><a href="" class="font-555">{{project.s_name | limitTo: 25}} </a></h4>
+														<div>{{project.images.length+" Photos"}}</div>
+													</div>
+												</div>	
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+						<div id="blogs" class="tab-pane fade">
+							<section class="margin-bottom-10">
+								<div>
+									<h3 class="u-inline">Blogs</h3>
+									No Blogs
+								</div>
+							</section>
+						</div>
+						<div id="reviews" class="tab-pane fade">
+							<section class="margin-bottom-20">
+								<h3 class="font-green ng-binding">{{reviews.length}} Reviews</h3>
+								<div ng-show="reviews">
+								<div class="margin-bottom-30" ng-repeat="review in reviews">
+									<div id="review_head" class="review_head  margin-bottom-10">
+										<div class="row">
+											<div class="col-sm-2 text-center paddingR">
+												<img class="margin-bottom-10" ng-src="assets/img/user.png" height="50" width="50"></br>
+											</div>
+											<div class="ratings col-sm-9 paddingL">
+												<div class="margin-bottom-10">
+													<span class="font-555 font-size-14 review-user-name">## Villiam Jose, CA, 95113</span>
+													<div><span ng-repeat="n in review.ratings" class="fa fa-star" style="color:#72C02C"></span>									<span ng-repeat="n in [1,2,3,4,5] | limitTo:5-review.ratings.length" class="fa fa-star" style="color:#ccc"></span></div>
+												</div>
+											</div>
+										</div>
+										<div class="pro-company-review">
+											<div class="procontentreview hideContentreview">{{review.s_review_comment}}</div>
+											<div  ng-if="review.s_review_comment.length >260" class="showreview text-right" ><a data-target="">Show more</a></div>
+
+										</div>
+
+									</div>
+									<hr>
+								</div>
+								</div>
+								<div ng-show="!reviews">
+									No Reviews
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 sky-form">
+					<div id="secondary" class="widget-area text-center margin-bottom-20">
+							<div class="profile-complete">
+		                            <h4>Profile Completeness</h4>
+		                            <hr>
+									<div class="progress progress-u progress-sm">
+                                        <div style="width: 88%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="88" role="progressbar" class="progress-bar progress-bar-u">
+                                        </div>
+                                    </div>
+		                    </div>
+					</div>
+					<!--<div id="secondary" class="widget-area margin-bottom-20">-->
+
+							<!--<h3>{{reviews.length}} Reviews</h3>-->
+							<!--<div class="font-size-20">-->
+									<!--<div class="font-skyblue">-->
+									<!--<span class="glyphicon glyphicon-star glyphicon-star"></span>-->
+									<!--<span class="glyphicon glyphicon-star glyphicon-star"></span>-->
+									<!--<span class="glyphicon glyphicon-star glyphicon-star"></span>-->
+									<!--<span class="glyphicon glyphicon-star glyphicon-star"></span>-->
+									<!--<span class="glyphicon glyphicon-star glyphicon-star"></span></div>-->
+							<!--</div>-->
+					<!--</div>-->
+
+					<div id="secondary" class="widget-area">
+							<div class="profile-Information">
+		                            <h4 class="u-inline text-center">Profile Information</h4> <span><i ng-click="editProInfo()" class="fa fa-pencil"></i></span>
+		                         <hr>
+								<div class="row">
+									<div class="col col-md-4"><strong>Address</strong></div>
+									<div class="col col-md-8">{{prof.address}} {{prof['location'][0]['city_name']}}, {{prof['location'][0]['state_short_name']}} {{prof['location'][0]['zip']}}</div>
+								</div>
+		                    </div>
+					</div><br>
+					
+					<div id="secondary" class="widget-area">
+					   <div class="profile-Information">
+		                            <h4 class="u-inline text-center">Phone Verification</h4> 
+		                          <hr>
+					    <div style="font-size:12px;"></span><strong> Phone Verified </strong><span class="glyphicon glyphicon-ok"></div>
+					    <div style="font-size:12px;"><a href="#" style="color:#4285F4;"><strong>Phone Verified</strong></a></div>
+					 </div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<script type="text/javascript">
+$(document).on("click", "#sign", function() {
+        $("#overviews").removeClass("active");
+        $("#blog").removeClass("active");
+        $("#review").addClass("active");
+
+});
+</script>
+
+<script type="text/javascript">
+$(document).on("click", ".show a", function() {
+    var $this = $(this); 
+    var $content = $this.parent().prev("div.contentview ");
+    var linkText = $this.text().toUpperCase();    
+    
+    if(linkText === "SHOW MORE"){
+        linkText = "Show less";
+        $content.switchClass("hideContentview", "showContentview", 400);
+    } else {
+        linkText = "Show more";
+        $content.switchClass("showContentview", "hideContentview", 400);
+    };
+
+    $this.text(linkText);
+});			
+</script>
+<script type="text/javascript">
+$(document).on("click", ".showreview a", function() {
+    var $this = $(this); 
+    var $content = $this.parent().prev("div.procontentreview");
+    var linkText = $this.text().toUpperCase();    
+    if(linkText === "SHOW MORE"){
+        linkText = "Show less";
+        $content.switchClass("hideContentreview", "showContentreview", 400);
+    } else {
+        linkText = "Show more";
+        $content.switchClass("showContentreview", "hideContentreview", 400);
+    };
+    $this.text(linkText);
+});
+</script>
+
+<script type="text/javascript">
+$(document).on("click", ".show-more a", function() {
+    var $this = $(this); 
+    var $content = $this.parent().prev("div.pro_content");
+    var linkText = $this.text().toUpperCase();    
+    
+    if(linkText === "SHOW MORE"){
+        linkText = "Show less";
+        $content.switchClass("hideContent", "showContent", 400);
+    } else {
+        linkText = "Show more";
+        $content.switchClass("showContent", "hideContent", 400);
+    };
+
+    $this.text(linkText);
+});
+</script>

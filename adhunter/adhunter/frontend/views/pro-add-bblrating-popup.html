@@ -1,0 +1,35 @@
+<div ng-controller="myprofile"> 
+             <div class="tag-box tag-box-v2">   
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"  ng-click="$dismiss('cancel')">&times;</button>
+                    <h4 class="modal-title">Add Your BBB, Yelp and Google Rating</h4>
+                    <p>Adding your Better Business Bureau rating lets homeowners know that you are trustworthy and stand by your work.</p>
+                </div>
+                <div class="modal-body">
+                    <div class="sky-form">
+                            <section>
+                                <label class="input">
+                                    <i class="icon-append fa fa-globe"></i>
+                                    <input type="url" mg-model="bbburl" placeholder="Add BBB Url">
+                                </label>
+                            </section>
+                            <section>
+                                <label class="input">
+                                    <i class="icon-append fa fa-globe"></i>
+                                    <input type="url" mg-model="yelpurl" placeholder="Add yelp Url">
+                                </label>
+                            </section>
+                            <section>
+                                <label class="input">
+                                    <i class="icon-append fa fa-globe"></i>
+                                    <input type="url" mg-model="googlerating" placeholder="Add Google Rating">
+                                </label>
+                            </section>
+                    </div>
+                </div>
+                <div class="modal-footer text-right">
+                    <button type="button" class="btn btn-default btn-default" data-dismiss="modal" ng-click="$dismiss('cancel')">Cancel</button>
+                    <button type="button" id="submitForm" class="btn btn-u btn-default" ng-click="saveUrlRating()">Add</button>
+                </div>
+            </div>
+ </div>
